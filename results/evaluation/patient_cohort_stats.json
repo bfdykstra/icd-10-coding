@@ -1,0 +1,67 @@
+{
+  "num_rows": 1500,
+  "by_pdgm_bucket": {
+    "Other": 1410,
+    "Surgical Aftercare": 41,
+    "Endocrine": 22,
+    "Cardiac & Circulatory": 15,
+    "Respiratory": 10,
+    "Neuro/Rehab": 1,
+    "Wounds": 1
+  },
+  "demographics": {
+    "gender_counts": {
+      "F": 772,
+      "M": 728
+    },
+    "age_summary": {
+      "count": 1500.0,
+      "mean": 56.28333333333333,
+      "std": 17.857350835854835,
+      "min": 18.0,
+      "25%": 43.0,
+      "50%": 58.0,
+      "75%": 70.0,
+      "max": 91.0
+    }
+  },
+  "modalities_presence": {
+    "has_procedures": 87805,
+    "has_meds": 133657,
+    "has_labs": 0
+  },
+  "diagnoses": {
+    "num_icd10_codes_summary": {
+      "count": 1500.0,
+      "mean": 14.027333333333333,
+      "std": 7.363971184306134,
+      "min": 3.0,
+      "25%": 8.0,
+      "50%": 13.0,
+      "75%": 18.0,
+      "max": 39.0
+    },
+    "top_primary_icd10": {
+      "Z5111": 27,
+      "I130": 27,
+      "A419": 26,
+      "I214": 26,
+      "N179": 18,
+      "I110": 15,
+      "J189": 14,
+      "N390": 13,
+      "I2699": 12,
+      "I350": 12,
+      "I2510": 10,
+      "I671": 9,
+      "J690": 9,
+      "U071": 9,
+      "I4891": 9,
+      "O34211": 9,
+      "I480": 8,
+      "E6601": 7,
+      "K91840": 7,
+      "K7031": 7
+    }
+  }
+}

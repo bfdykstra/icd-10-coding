@@ -1,0 +1,47 @@
+# Core data science libraries
+pandas>=1.5.0
+numpy>=1.23.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Machine Learning
+scikit-learn>=1.2.0
+xgboost>=1.7.0
+
+# Medical NER - scispaCy
+# spacy>=3.5.0
+# scispacy>=0.5.0
+
+# Download scispaCy models with:
+# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_sm-0.5.4.tar.gz
+# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
+
+# Deep Learning & Transformers (optional)
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.12.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.22.0
+
+# Optional: Advanced medical NER
+# medcat>=1.9.0
+
+# OpenAI + structured outputs
+openai>=1.40.0
+instructor>=1.4.0
+pydantic>=2.5.0
+
+# Parquet IO
+pyarrow>=14.0.0
+
+dotenv
+## Async HTTP for scraping
+aiohttp>=3.9.0
+nest_asyncio>=1.5.6
+
+chromadb==1.2.1
