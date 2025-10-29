@@ -97,97 +97,268 @@ class CandidateGenerator:
             score = base_weight * (n - rank) / n
             all_scores[code] = all_scores.get(code, 0.0) + score
 
+    def semantic_search_strategy(self, query_text, max_results=100):
+        """
+        Perform plain semantic search using discharge summary.
+        """
+        if not query_text or pd.isna(query_text):
+            return []
+        
+        try:
+            results = self.collection.query(
+                query_texts=[query_text],
+                n_results=max_results
+            )
+            
+            return results['ids'][0] if results['ids'] else []
+        except Exception as e:
+            print(f"Semantic search error: {e}")
+            return []
+
+    def keyword_search_strategy(self, entities, query_text="medical condition", max_results=100):
+        """
+        Use ChromaDB keyword search with $contains operator.
+        """
+        if not entities:
+            return []
+        
+        # Build OR query for all entities
+        where_conditions = [{"$contains": entity.lower()} for entity in entities if entity]
+        
+        if not where_conditions:
+            return []
+        
+        try:
+            # Query with keyword filtering
+            results = self.collection.query(
+                query_texts=[query_text],
+                where_document={"$or": where_conditions} if len(where_conditions) > 1 else where_conditions[0],
+                n_results=max_results
+            )
+            
+            return results['ids'][0] if results['ids'] else []
+        except Exception as e:
+            print(f"Keyword search error: {e}")
+            return []
+
+
+    def triple_hybrid_strategy(
+      self,
+      discharge_summary: Optional[str],
+      entities: List[str],
+      icd_codes_list=None,            # kept for signature compatibility; unused
+      icd_documents_list=None,        # kept for signature compatibility; unused
+      icd_metadata_list=None,         # kept for signature compatibility; unused
+      max_results: int = 100,
+  ):
+      all_candidates: Dict[str, float] = {}
+
+      entities_lower = []
+      seen = set()
+      for e in (entities or []):
+          e = (e or "").lower().strip()
+          if e and e not in seen:
+              seen.add(e)
+              entities_lower.append(e)
+
+      entity_batch_limit = 32
+      n_per_query = min(50, max(10, max_results))
+
+      # Batched entity queries (tag-ish signal)
+      if entities_lower:
+          try:
+              res = self.collection.query(
+                  query_texts=entities_lower[:entity_batch_limit],
+                  n_results=n_per_query,
+                  include=["distances"],
+              )
+              for i, ids in enumerate(res.get("ids", []) or []):
+                  dists = res.get("distances", [[]])[i] if res.get("distances") else []
+                  N = max(1, len(ids))
+                  for j, code in enumerate(ids):
+                      sim = 1.0 - dists[j] if dists and j < len(dists) and dists[j] is not None else (N - j) / N
+                      all_candidates[code] = all_candidates.get(code, 0.0) + 3.0 * float(sim)
+          except Exception:
+              pass
+
+      # Keyword OR on entities
+      try:
+          where_conditions = [{"$contains": e} for e in entities_lower[:entity_batch_limit]]
+          query_text = (discharge_summary or "condition")[:500]
+          where_document = (
+              {"$or": where_conditions} if len(where_conditions) > 1 else (where_conditions[0] if where_conditions else None)
+          )
+          res_kw = self.collection.query(
+              query_texts=[query_text],
+              where_document=where_document,
+              n_results=n_per_query,
+              include=["distances"],
+          )
+          ids_kw = res_kw.get("ids", [[]])[0] if res_kw.get("ids") else []
+          d_kw = res_kw.get("distances", [[]])[0] if res_kw.get("distances") else []
+          N = max(1, len(ids_kw))
+          for j, code in enumerate(ids_kw):
+              sim = 1.0 - d_kw[j] if d_kw and j < len(d_kw) and d_kw[j] is not None else (N - j) / N
+              all_candidates[code] = all_candidates.get(code, 0.0) + 2.0 * float(sim)
+      except Exception:
+          pass
+
+      # Semantic on summary
+      try:
+          if discharge_summary:
+              res_sem = self.collection.query(
+                  query_texts=[discharge_summary[:2000]],
+                  n_results=n_per_query,
+                  include=["distances"],
+              )
+              ids_sem = res_sem.get("ids", [[]])[0] if res_sem.get("ids") else []
+              d_sem = res_sem.get("distances", [[]])[0] if res_sem.get("distances") else []
+              N = max(1, len(ids_sem))
+              for j, code in enumerate(ids_sem):
+                  sim = 1.0 - d_sem[j] if d_sem and j < len(d_sem) and d_sem[j] is not None else (N - j) / N
+                  all_candidates[code] = all_candidates.get(code, 0.0) + 1.0 * float(sim)
+      except Exception:
+          pass
+
+      sorted_candidates = sorted(all_candidates.items(), key=lambda x: x[1], reverse=True)
+      return [code for code, _ in sorted_candidates[:max_results]]
+
     def suggest_candidates(
-        self,
-        discharge_summary: str,
-        already_coded: Iterable[str],
-        disease_entities_field: Optional[str],
-        drug_entities_field: Optional[str],
-        anatomy_entities_field: Optional[str],
-        k: int = 10,
-        weights: Tuple[float, float, float] = (3.0, 2.0, 1.0),  # tag, keyword, semantic
-    ) -> List[CandidateSuggestion]:
-        # Inputs
-        disease_entities = [e.lower() for e in _tokenize_entities(disease_entities_field)]
-        drug_entities = [e.lower() for e in _tokenize_entities(drug_entities_field)]
-        anatomy_entities = [e.lower() for e in _tokenize_entities(anatomy_entities_field)]
-        entities = [e for e in (disease_entities + drug_entities + anatomy_entities) if e]
+      self,
+      discharge_summary: str,
+      already_coded: Iterable[str],
+      disease_entities_field: Optional[str],
+      drug_entities_field: Optional[str],
+      anatomy_entities_field: Optional[str],
+      k: int = 10,
+      weights: Tuple[float, float, float] = (3.0, 2.0, 1.0),  # tag, keyword, semantic
+  ) -> List[CandidateSuggestion]:
+      # Inputs
+      disease_entities = [e.lower() for e in _tokenize_entities(disease_entities_field)]
+      drug_entities = [e.lower() for e in _tokenize_entities(drug_entities_field)]
+      anatomy_entities = [e.lower() for e in _tokenize_entities(anatomy_entities_field)]
+      # Dedup while preserving order
+      seen = set()
+      entities = []
+      for e in disease_entities + drug_entities + anatomy_entities:
+          if e and e not in seen:
+              seen.add(e)
+              entities.append(e)
 
-        # Strategy 11: combine three sources with weights
-        combined_scores: Dict[str, float] = {}
+      combined_scores: Dict[str, float] = {}
+      # Bound cost
+      entity_batch_limit = 32
+      n_per_query = min(50, max(10, 5 * k))
 
-        # 1) Tag-based: treat each entity as a high-weight query (approximation of metadata tag hits)
-        for ent in entities:
-            try:
-                res = self.collection.query(query_texts=[ent], n_results=100)
-                ids = res.get("ids", [[]])[0] if res and res.get("ids") else []
-                self._accumulate_scores(combined_scores, ids, base_weight=weights[0])
-            except Exception:
-                continue
+      # 1) Batched "tag-based" approximation: embed entities together once
+      if entities:
+          q_entities = entities[:entity_batch_limit]
+          try:
+              res = self.collection.query(
+                  query_texts=q_entities,
+                  n_results=n_per_query,
+                  include=["distances"],
+              )
+              ids_list = res.get("ids", [])
+              dists_list = res.get("distances", [])
+              for i, ids in enumerate(ids_list or []):
+                  dists = dists_list[i] if dists_list and i < len(dists_list) else []
+                  N = max(1, len(ids))
+                  for j, code in enumerate(ids):
+                      # Distance -> similarity; fallback to rank if missing
+                      sim = 1.0 - dists[j] if dists and j < len(dists) and dists[j] is not None else (N - j) / N
+                      combined_scores[code] = combined_scores.get(code, 0.0) + weights[0] * float(sim)
+          except Exception:
+              pass
 
-        # 2) Keyword search: combine entities + head of summary into one query
-        try:
-            kw_query = self._build_keyword_query(discharge_summary, disease_entities, drug_entities, anatomy_entities)
-            if kw_query:
-                res_kw = self.collection.query(query_texts=[kw_query], n_results=100)
-                ids_kw = res_kw.get("ids", [[]])[0] if res_kw and res_kw.get("ids") else []
-                self._accumulate_scores(combined_scores, ids_kw, base_weight=weights[1])
-        except Exception:
-            pass
+      # 2) Keyword search with OR contains on entities + head of summary
+      try:
+          kw_entities = entities[:entity_batch_limit]
+          where_conditions = [{"$contains": e} for e in kw_entities] if kw_entities else []
+          query_text = (discharge_summary or "condition")[:500]
+          where_document = (
+              {"$or": where_conditions}
+              if len(where_conditions) > 1
+              else (where_conditions[0] if where_conditions else None)
+          )
 
-        # 3) Semantic search: full discharge summary
-        try:
-            if discharge_summary:
-                res_sem = self.collection.query(query_texts=[discharge_summary], n_results=100)
-                ids_sem = res_sem.get("ids", [[]])[0] if res_sem and res_sem.get("ids") else []
-                self._accumulate_scores(combined_scores, ids_sem, base_weight=weights[2])
-        except Exception:
-            pass
+          res_kw = self.collection.query(
+              query_texts=[query_text],
+              where_document=where_document,
+              n_results=n_per_query,
+              include=["distances"],
+          )
+          ids_kw = res_kw.get("ids", [[]])[0] if res_kw.get("ids") else []
+          d_kw = res_kw.get("distances", [[]])[0] if res_kw.get("distances") else []
+          N = max(1, len(ids_kw))
+          for j, code in enumerate(ids_kw):
+              sim = 1.0 - d_kw[j] if d_kw and j < len(d_kw) and d_kw[j] is not None else (N - j) / N
+              combined_scores[code] = combined_scores.get(code, 0.0) + weights[1] * float(sim)
+      except Exception:
+          pass
 
-        # Rank and filter out already-coded
-        already = {_normalize_code(c) for c in already_coded if isinstance(c, str)}
-        ranked = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
-        ranked_codes = [c for c, _ in ranked if _normalize_code(c) not in already]
+      # 3) Semantic search on full summary (truncate for embedding cost)
+      try:
+          if discharge_summary:
+              summary_q = discharge_summary[:2000]
+              res_sem = self.collection.query(
+                  query_texts=[summary_q],
+                  n_results=n_per_query,
+                  include=["distances"],
+              )
+              ids_sem = res_sem.get("ids", [[]])[0] if res_sem.get("ids") else []
+              d_sem = res_sem.get("distances", [[]])[0] if res_sem.get("distances") else []
+              N = max(1, len(ids_sem))
+              for j, code in enumerate(ids_sem):
+                  sim = 1.0 - d_sem[j] if d_sem and j < len(d_sem) and d_sem[j] is not None else (N - j) / N
+                  combined_scores[code] = combined_scores.get(code, 0.0) + weights[2] * float(sim)
+      except Exception:
+          pass
 
-        # Fetch descriptions from collection metadatas/documents
-        top_codes = ranked_codes[:k]
-        suggestions: List[CandidateSuggestion] = []
-        if top_codes:
-            try:
-                got = self.collection.get(ids=top_codes, include=["metadatas", "documents"])
-                meta_map: Dict[str, Dict[str, str]] = {}
-                doc_map: Dict[str, Optional[str]] = {}
-                for i, cid in enumerate(got.get("ids", [])):
-                    md = None
-                    if got.get("metadatas") and i < len(got["metadatas"]):
-                        md = got["metadatas"][i]
-                    meta_map[cid] = md or {}
-                    doc_val = None
-                    if got.get("documents") and i < len(got["documents"]):
-                        doc_val = got["documents"][i]
-                    doc_map[cid] = doc_val
-            except Exception:
-                meta_map, doc_map = {}, {}
+      # Rank and filter out already-coded
+      already = {_normalize_code(c) for c in already_coded if isinstance(c, str)}
+      ranked = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
+      ranked_codes = [c for c, _ in ranked if _normalize_code(c) not in already]
 
-            for code in top_codes:
-                score = combined_scores.get(code, 0.0)
-                md = meta_map.get(code, {})
-                desc = md.get("code_description") or md.get("title") or (doc_map.get(code) or "")
-                suggestions.append(
-                    CandidateSuggestion(
-                        code=code,
-                        description=str(desc) if desc else "",
-                        score=float(score),
-                        components={
-                            "tag": float(weights[0]),
-                            "keyword": float(weights[1]),
-                            "semantic": float(weights[2]),
-                        },
-                        matched_keywords=[],
-                    )
-                )
+      # Fetch descriptions from collection metadatas/documents
+      top_codes = ranked_codes[:k]
+      suggestions: List[CandidateSuggestion] = []
+      if top_codes:
+          try:
+              got = self.collection.get(ids=top_codes, include=["metadatas", "documents"])
+              meta_map: Dict[str, Dict[str, str]] = {}
+              doc_map: Dict[str, Optional[str]] = {}
+              for i, cid in enumerate(got.get("ids", [])):
+                  md = None
+                  if got.get("metadatas") and i < len(got["metadatas"]):
+                      md = got["metadatas"][i]
+                  meta_map[cid] = md or {}
+                  doc_val = None
+                  if got.get("documents") and i < len(got["documents"]):
+                      doc_val = got["documents"][i]
+                  doc_map[cid] = doc_val
+          except Exception:
+              meta_map, doc_map = {}, {}
 
-        return suggestions
+          for code in top_codes:
+              score = combined_scores.get(code, 0.0)
+              md = meta_map.get(code, {})
+              desc = md.get("code_description") or md.get("title") or (doc_map.get(code) or "")
+              suggestions.append(
+                  CandidateSuggestion(
+                      code=code,
+                      description=str(desc) if desc else "",
+                      score=float(score),
+                      components={
+                          "tag": float(weights[0]),
+                          "keyword": float(weights[1]),
+                          "semantic": float(weights[2]),
+                      },
+                      matched_keywords=[],
+                  )
+              )
+
+      return suggestions
 
 
 def _parse_codes_field(codes_field: Optional[str]) -> List[str]:
