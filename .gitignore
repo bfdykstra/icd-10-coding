@@ -10,6 +10,7 @@ __pycache__/
 *.so
 
 icd10_embeddings/
+patient_summary_embeddings/
 
 data/*
 
@@ -222,3 +223,46 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+client/node_modules
+client/.pnp
+client/.pnp.*
+client/.yarn/*
+client/!.yarn/patches
+client/!.yarn/plugins
+client/!.yarn/releases
+client/!.yarn/versions
+
+# testing
+client//coverage
+
+# next.js
+client//.next/
+client//out/
+
+# production
+client//build
+
+# misc
+client/.DS_Store
+client/*.pem
+
+# debug
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+client/.env*
+
+# vercel
+client/.vercel
+
+# typescript
+client/*.tsbuildinfo
+client/next-env.d.ts
