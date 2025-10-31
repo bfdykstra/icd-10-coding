@@ -4,6 +4,7 @@ import os
 # os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from utils.icd_checking_utils import check_icd_codes_streaming
@@ -17,6 +18,20 @@ class CheckRequest(BaseModel):
     existing_codes: list[ICD10Code]
 
 app = FastAPI()
+
+# Configure CORS to allow requests from Next.js frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",  # Next.js default dev server
+        "http://localhost:3001",  # Alternative port
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:3001",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods (GET, POST, OPTIONS, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
 
 @app.get("/")
 def read_root():

@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { Upload, FileText } from "lucide-react"
 import { ICD10MultiSelect } from "@/components/icd10-multi-select"
 import { SuggestedCodes } from "@/components/suggested-codes"
-import { mockStreamResponse } from "@/lib/mock-api"
+import { checkIcdCodesStreaming } from "@/lib/api"
 
 export type ICD10Code = {
   code: string
@@ -32,6 +32,7 @@ export function ICD10Checker() {
   const [streamedText, setStreamedText] = useState("")
   const [suggestedCodes, setSuggestedCodes] = useState<SuggestedCode[]>([])
   const [showResults, setShowResults] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -51,18 +52,28 @@ export function ICD10Checker() {
     setStreamedText("")
     setSuggestedCodes([])
     setShowResults(true)
+    setError(null)
 
-    // Mock streaming response
-    await mockStreamResponse(
-      {
-        dischargeSummary,
-        existingCodes: selectedCodes,
-      },
-      (chunk) => {
-        setStreamedText((prev) => prev + chunk)
+    // Real API streaming response
+    await checkIcdCodesStreaming(
+      dischargeSummary,
+      selectedCodes,
+      (message) => {
+        // Handle progress events
+        setStreamedText((prev) => prev + message + "\n")
       },
       (codes) => {
+        // Handle chunk events - update suggested codes incrementally
         setSuggestedCodes(codes)
+      },
+      (codes) => {
+        // Handle result event - final codes
+        setSuggestedCodes(codes)
+        setIsProcessing(false)
+      },
+      (errorMessage) => {
+        // Handle error events
+        setError(errorMessage)
         setIsProcessing(false)
       },
     )
@@ -188,19 +199,34 @@ export function ICD10Checker() {
               </div>
             ) : (
               <div className="space-y-4">
+                {error && (
+                  <div className="bg-destructive/10 border border-destructive rounded-lg p-4">
+                    <p className="text-sm text-destructive font-medium">Error: {error}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Please ensure the backend server is running at {process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}
+                    </p>
+                  </div>
+                )}
+
                 {isProcessing && (
                   <div className="bg-accent rounded-lg p-4">
                     <p className="text-sm text-accent-foreground whitespace-pre-wrap">{streamedText}</p>
                   </div>
                 )}
 
-                {!isProcessing && suggestedCodes.length > 0 && (
+                {!isProcessing && !error && suggestedCodes.length > 0 && (
                   <SuggestedCodes
                     codes={suggestedCodes}
                     onAccept={handleAcceptCode}
                     onReject={handleRejectCode}
                     onAddCustom={handleAddCustomCode}
                   />
+                )}
+
+                {!isProcessing && !error && suggestedCodes.length === 0 && streamedText && (
+                  <div className="bg-accent rounded-lg p-4">
+                    <p className="text-sm text-accent-foreground">No missing codes identified.</p>
+                  </div>
                 )}
               </div>
             )}

@@ -55,7 +55,7 @@ async def check_icd_codes_streaming(discharge_summary: str, existing_codes: list
     """
     try:
         # Progress: Searching vector database
-        yield _format_sse_event("progress", {"status": "searching", "message": "Querying vector database..."})
+        yield _format_sse_event("progress", {"status": "searching", "message": "Querying ICD-10 code database..."})
 
         embedding = embedding_model.encode(discharge_summary)
         examples = vector_store.search_with_embedding(embedding, top_k=top_k)
