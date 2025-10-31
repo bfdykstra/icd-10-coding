@@ -3,7 +3,7 @@ import uvicorn
 
 # Set tokenizers parallelism to avoid warnings when using uvicorn with reload
 # This must be set before any tokenizers are imported/initialized
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+# os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 if __name__ == "__main__":
     uvicorn.run(

@@ -12,6 +12,7 @@ from typing import List, Dict, Optional, Any, TypedDict, Generic, TypeVar
 import json
 import logging
 
+
 class PatientSummaryMetadata(TypedDict):
     icd_codes: List[str]
     discharge_summary: str
@@ -113,6 +114,16 @@ class VectorStore(Generic[T]):
             where_document=where_document
         )
         # Return type is now properly typed with T
+        return result  # type: ignore
+
+    def search_with_embedding(self, embedding: List[float], top_k: int = 5, 
+              where_clause: Optional[Dict] = None,
+              where_document: Optional[Dict] = None) -> TypedQueryResult[T]:
+        """Search with embedding"""
+        result = self.collection.query(
+            query_embeddings=embedding,
+            n_results=top_k,
+        )
         return result  # type: ignore
     
     def get_documents(self, where_clause: Optional[Dict] = None, limit: int = None) -> Dict[str, Any]:

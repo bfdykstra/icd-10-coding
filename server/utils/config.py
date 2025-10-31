@@ -11,7 +11,7 @@ from typing import List
 class Config:
     # API Configuration
     openai_api_key: str = os.getenv('OPENAI_API_KEY', '')
-    summary_model: str = "gpt-5-mini"
+    summary_model: str = "gpt-4o"
     synthesis_model: str = "gpt-5-mini"
     
     # Database Configuration
@@ -20,6 +20,8 @@ class Config:
     patient_summary_embedding_path: str = "./patient_summary_embeddings"
     icd10_collection_name: str = "icd10_embeddings"
     patient_summary_collection_name: str = "patient_summary_embeddings"
+
+    embedding_model: str = "lokeshch19/ModernPubMedBERT"
     
     # Processing Configuration
     batch_size: int = 100

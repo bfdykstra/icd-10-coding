@@ -1,7 +1,7 @@
 import os
 # Set tokenizers parallelism to avoid warnings when using uvicorn with reload
 # This must be set before any tokenizers are imported/initialized
-os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+# os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
@@ -43,7 +43,8 @@ async def check_icd_codes_streaming_endpoint(request: CheckRequest):
     async def event_generator():
         async for event in check_icd_codes_streaming(
             discharge_summary=request.discharge_summary,
-            existing_codes=request.existing_codes  # These are BaseModel instances
+            existing_codes=request.existing_codes,  # These are BaseModel instances
+            top_k = 5
         ):
             yield event
     
