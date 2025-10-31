@@ -10,6 +10,7 @@ import logging
 from openai import OpenAI, AsyncOpenAI
 import instructor
 from dotenv import load_dotenv
+import utils.config as config
 
 load_dotenv()
 
@@ -38,10 +39,13 @@ class LLMClient:
             self._async_client = AsyncOpenAI(api_key=self.api_key)
         return self._async_client
     
-    def get_instructor_client(self, model: str = "gpt-4o-mini"):
+    def get_instructor_client(self, model: Optional[str] = None):
         """Get instructor-wrapped async client for structured outputs"""
+        if model is None:
+            model = config.config.summary_model
         return instructor.from_openai(self.async_client), model
     
 
 # Global instance for convenience
-llm_client = LLMClient() 
+llm_client = LLMClient()
+
