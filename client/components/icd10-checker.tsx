@@ -46,7 +46,8 @@ export function ICD10Checker() {
     if (file) {
       const reader = new FileReader();
       reader.onload = (event) => {
-        setDischargeSummary(event.target?.result as string);
+        const content = event.target?.result as string;
+        setDischargeSummary(content);
       };
       reader.readAsText(file);
     }
