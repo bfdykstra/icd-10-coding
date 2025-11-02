@@ -11,7 +11,7 @@ from typing import List
 class Config:
     # API Configuration
     openai_api_key: str = os.getenv('OPENAI_API_KEY', '')
-    summary_model: str = "gpt-4o"
+    summary_model: str = "gpt-4.1-mini"
     synthesis_model: str = "gpt-5-mini"
     
     # Database Configuration

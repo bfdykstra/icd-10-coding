@@ -129,16 +129,21 @@ async def _generate_missing_codes(
     # Build prompt
     prompt = _build_prompt(discharge_summary, existing_codes, examples)
 
-
+    # print(prompt)
     
     # Use raw OpenAI client for streaming, then parse JSON with instructor
     # Instructor's streaming with response_model doesn't work as expected
     # So we'll stream raw text and use instructor to parse accumulated JSON
     messages = [
-        {
-            "role": "system",
-            "content": "You are a medical coding assistant expert in ICD-10 coding. Analyze discharge summaries and identify missing ICD-10 codes that should be included based on clinical documentation. Respond with valid JSON only."
-        },
+#         {
+#             "role": "system",
+#             "content": """
+#             You are an expert professional ICD-10 medical coder. Your only task is to determine whether the discharge summary supports any additional ICD-10 codes not already recorded.
+
+# Accuracy and documentation integrity are essential.
+# If the discharge summary does not clearly support a diagnosis, **do not suggest the code**.
+# """
+#         },
         {
             "role": "user",
             "content": prompt
@@ -204,70 +209,75 @@ def _build_prompt(discharge_summary: str, existing_codes: List[BaseModel], examp
     Returns:
         str: The constructed prompt string.
     """
-    prompt_parts = []
-    
-    # Task description
-    prompt_parts.append("""Analyze the following discharge summary and identify any ICD-10 codes that are missing from the existing code list.
-    
-Your task is to identify conditions, diagnoses, or procedures mentioned in the discharge summary that warrant ICD-10 codes but are not currently included in the existing codes list.
-""")
-    
-    # Discharge summary
-    prompt_parts.append("## DISCHARGE SUMMARY:")
-    prompt_parts.append(discharge_summary)
-    prompt_parts.append("")
-    
+
     # Existing codes
-    prompt_parts.append("## EXISTING ICD-10 CODES:")
+    existing_codes_str = ""
     if existing_codes:
         for code in existing_codes:
-            prompt_parts.append(f"- {code.code}: {code.description}")
-    else:
-        prompt_parts.append("None provided")
-    prompt_parts.append("")
+            existing_codes_str += f"- {code.code}: {code.description}\n"
     
-    # Examples from vector store
-    metadatas = examples.get('metadatas', [])
-    documents = examples.get('documents', [])
-    if metadatas and len(metadatas) > 0 and len(metadatas[0]) > 0:
-        prompt_parts.append("## REFERENCE EXAMPLES:")
-        prompt_parts.append("Here are similar discharge summaries with their full associated ICD-10 codes for reference:")
-        prompt_parts.append("")
-        
-        # Use top 3 examples
-        num_examples = min(3, len(metadatas[0]))
-        for i in range(num_examples):
-            example_summary = documents[0][i] if documents and len(documents) > 0 and len(documents[0]) > i else ""
-            example_metadata = metadatas[0][i] if i < len(metadatas[0]) else {}
-            example_codes = example_metadata.get('icd_codes', '') if isinstance(example_metadata, dict) else ''
-            
-            prompt_parts.append(f"### Example {i+1}:")
-            prompt_parts.append(f"Discharge Summary: {example_summary}")
-            if example_codes:
-                # Handle comma-separated string
-                if isinstance(example_codes, str):
-                    codes_list = [c.strip() for c in example_codes.split(',')]
-                else:
-                    codes_list = example_codes if isinstance(example_codes, list) else []
-                prompt_parts.append(f"Associated ICD-10 Codes: {', '.join(codes_list)}")
-            prompt_parts.append("")
-    
-    # Instructions
-    prompt_parts.append(f"""## INSTRUCTIONS:
+    prompt = f"""You are an expert professional ICD-10 medical coder. Your only task is to determine whether the discharge summary supports any additional ICD-10 codes not already recorded:
 
-1. Carefully review the discharge summary for any conditions, diagnoses, complications, or procedures that require ICD-10 codes.
-2. Compare against the existing codes list - only identify codes that are MISSING, not ones already included.
-3. For each missing code, provide:
-   - The appropriate ICD-10 code
-   - The official description
-   - Clinical evidence from the discharge summary that supports this code
-   - A confidence assessment (strong, moderate, weak, unsupported) indicating how certain you are this code is warranted
-4. If no codes are missing, return an empty list.
-5. Focus on codes that are clinically relevant and supported by documentation in the summary.
+1. **A clinician’s discharge summary**, and
+2. **A list of ICD-10 codes already assigned**
+
+Your goal is to determine **whether any clinically supported ICD-10 diagnoses or conditions are missing**.
+
+**Rules & Requirements**
+
+1. **Only identify codes that are clearly supported by clinical evidence in the discharge summary.**
+
+   * Do *not* assume or infer conditions without documentation.
+   * Do *not* code ruled-out, suspected, or irrelevant items unless explicitly documented as confirmed.
+
+2. **Return an empty list if no additional ICD-10 codes are supported.**
+
+3. For each missing code, provide a JSON object with the following fields:
+
+   * **code**: The ICD-10 code
+   * **description**: The official ICD-10 description
+   * **clinicalInfo**: Clear, specific quotes or data from the discharge summary that justify the code
+   * **confidence**: One of: `"strong"`, `"moderate"`, `"weak"`, `"unsupported"`
+
+     * *Use “unsupported” only if there is mention of a condition but insufficient evidence to code it.*
+
+4. **Output must be formatted as a JSON array.**
+
+5. **Do not repeat codes that are already included.**
+
+---
+
+## ✅ **User Input Structure**
+
+**Discharge Summary:**
+{discharge_summary}
+
+**Existing ICD-10 Codes:**
+{existing_codes_str}
+```json
+[]
+```
 
 Return your analysis as a structured response with the missing codes. The response should be a valid JSON object that matches the following schema:
-{missing_code_response_schema}
 
-""")
+```json
+{missing_code_response_schema}
+```
+
+## **TASK**
+
+Input:
+
+1. **Discharge Summary**
+   {discharge_summary}
+
+2. **Existing ICD-10 Codes**
+   {existing_codes_str}
+
+"""
+    return prompt
+
     
-    return "\n".join(prompt_parts)
+    
+    
+    

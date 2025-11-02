@@ -278,6 +278,7 @@ def compare_results(api_missing_codes: List[Dict], true_missing_codes: List[str]
     
     # Calculate metrics
     true_positives = api_codes & true_codes_set
+    print('Found true positives: ', true_positives)
     false_positives = api_codes - true_codes_set
     false_negatives = true_codes_set - api_codes
     
@@ -366,6 +367,8 @@ async def validate_single_sample(
     for code in api_result['missing_codes']:
         code['code'] = code['code'].replace('.', '')        
    
+    print('returned missing codes: ', [c['code'] for c in api_result['missing_codes']])
+    print('true missing codes: ', true_missing_codes)
     # Compare results
     comparison = compare_results(api_result["missing_codes"], true_missing_codes)
     
@@ -645,7 +648,7 @@ async def main_async():
     
     # Optionally save results to file
     if validation_results["results"]:
-        output_file = Path(__file__).parent.parent / "results" / "validation" / "api_validation_results_with_rag.json"
+        output_file = Path(__file__).parent.parent / "results" / "validation" / "api_validation_results_gpt-4.1-mini_new_prompt.json"
         output_file.parent.mkdir(parents=True, exist_ok=True)
         
         with open(output_file, 'w') as f:
@@ -656,7 +659,7 @@ async def main_async():
         avg_recall = results_df['recall'].mean()
         avg_precision = results_df['precision'].mean()
         avg_f1 = results_df['f1'].mean()
-        results_df.to_csv(output_file.parent / "api_validation_results_with_rag.csv", index=False)
+        results_df.to_csv(output_file.parent / "api_validation_results_gpt-4.1-mini_new_prompt.csv", index=False)
         print(f"\nAverage Recall: {avg_recall:.3f}")
         print(f"Average Precision: {avg_precision:.3f}")
         print(f"Average F1 Score: {avg_f1:.3f}")

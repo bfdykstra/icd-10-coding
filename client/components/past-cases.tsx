@@ -54,7 +54,7 @@ function CaseCard({ pastCase }: { pastCase: PastCase }) {
               <CardDescription className="text-muted-foreground flex items-center gap-4 mt-2">
                 <span className="flex items-center gap-1">
                   <Calendar className="h-3 w-3" />
-                  {pastCase.date.toLocaleDateString()}
+                  {pastCase.date}
                 </span>
                 <span className="flex items-center gap-1">
                   <User className="h-3 w-3" />
