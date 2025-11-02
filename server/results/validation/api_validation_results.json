@@ -5,22 +5,21 @@
       "hadm_id": 27765450,
       "num_provided_codes": 11,
       "num_true_missing": 12,
-      "num_api_missing": 6,
-      "elapsed_time": 6.600142955780029,
-      "true_positives": [
-        "E872"
-      ],
+      "num_api_missing": 5,
+      "elapsed_time": 3.3748860359191895,
+      "true_positives": [],
       "false_positives": [
-        "E440",
+        "E460",
+        "E870",
         "I214",
-        "I4891",
-        "R790",
+        "R7989",
         "Z721"
       ],
       "false_negatives": [
         "E43",
         "E861",
         "E871",
+        "E872",
         "I21A1",
         "I255",
         "I340",
@@ -30,10 +29,10 @@
         "Z66",
         "Z6822"
       ],
-      "precision": 0.16666666666666666,
-      "recall": 0.08333333333333333,
-      "f1": 0.1111111111111111,
-      "num_api_codes": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
       "num_true_codes": 12
     },
     {
@@ -41,18 +40,21 @@
       "hadm_id": 22205215,
       "num_provided_codes": 18,
       "num_true_missing": 0,
-      "num_api_missing": 2,
-      "elapsed_time": 2.1445162296295166,
+      "num_api_missing": 5,
+      "elapsed_time": 6.5019309520721436,
       "true_positives": [],
       "false_positives": [
-        "R6884",
-        "Z5189"
+        "I471",
+        "I4819",
+        "R609",
+        "Z5183",
+        "Z723"
       ],
       "false_negatives": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
-      "num_api_codes": 2,
+      "num_api_codes": 5,
       "num_true_codes": 0
     },
     {
@@ -60,36 +62,35 @@
       "hadm_id": 25129064,
       "num_provided_codes": 1,
       "num_true_missing": 16,
-      "num_api_missing": 8,
-      "elapsed_time": 10.215428829193115,
+      "num_api_missing": 9,
+      "elapsed_time": 7.936412811279297,
       "true_positives": [
         "D631",
+        "E785",
+        "I2510",
         "I480",
-        "I70261",
         "N186",
         "Z7901",
-        "Z89612"
+        "Z89612",
+        "Z992"
       ],
       "false_positives": [
-        "I129",
-        "I824Y9"
+        "I739"
       ],
       "false_negatives": [
         "E1122",
-        "E785",
         "G546",
         "I120",
-        "I2510",
+        "I70261",
         "K219",
         "Z794",
         "Z87891",
-        "Z951",
-        "Z992"
+        "Z951"
       ],
-      "precision": 0.75,
-      "recall": 0.375,
-      "f1": 0.5,
-      "num_api_codes": 8,
+      "precision": 0.8888888888888888,
+      "recall": 0.5,
+      "f1": 0.64,
+      "num_api_codes": 9,
       "num_true_codes": 16
     },
     {
@@ -98,12 +99,12 @@
       "num_provided_codes": 9,
       "num_true_missing": 1,
       "num_api_missing": 3,
-      "elapsed_time": 4.209860801696777,
+      "elapsed_time": 6.002348899841309,
       "true_positives": [],
       "false_positives": [
-        "G8960",
-        "G9909",
-        "I739"
+        "I739",
+        "M89671",
+        "Z6843"
       ],
       "false_negatives": [
         "I10"
@@ -120,21 +121,21 @@
       "num_provided_codes": 5,
       "num_true_missing": 13,
       "num_api_missing": 5,
-      "elapsed_time": 4.060966968536377,
+      "elapsed_time": 4.028610706329346,
       "true_positives": [
-        "E1140",
+        "E669",
         "K3184",
         "M797"
       ],
       "false_positives": [
-        "E46",
-        "R296"
+        "E11629",
+        "E46"
       ],
       "false_negatives": [
         "D509",
         "E11319",
+        "E1140",
         "E441",
-        "E669",
         "E785",
         "K219",
         "K5900",
@@ -147,7 +148,6654 @@
       "f1": 0.33333333333333337,
       "num_api_codes": 5,
       "num_true_codes": 13
+    },
+    {
+      "idx": 5,
+      "hadm_id": 20129683,
+      "num_provided_codes": 13,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.9881327152252197,
+      "true_positives": [],
+      "false_positives": [
+        "J1289",
+        "R509",
+        "Z7982"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 6,
+      "hadm_id": 29693186,
+      "num_provided_codes": 1,
+      "num_true_missing": 10,
+      "num_api_missing": 6,
+      "elapsed_time": 4.666402816772461,
+      "true_positives": [
+        "E109",
+        "F1121",
+        "I2510",
+        "I313",
+        "Z20822",
+        "Z87891"
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        "I252",
+        "Z7901",
+        "Z7982",
+        "Z951"
+      ],
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.7499999999999999,
+      "num_api_codes": 6,
+      "num_true_codes": 10
+    },
+    {
+      "idx": 7,
+      "hadm_id": 28813442,
+      "num_provided_codes": 16,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 6.676066160202026,
+      "true_positives": [],
+      "false_positives": [
+        "A048",
+        "E870",
+        "E877",
+        "Z5181",
+        "Z5189"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 8,
+      "hadm_id": 29189472,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 6,
+      "elapsed_time": 5.479887247085571,
+      "true_positives": [
+        "J329"
+      ],
+      "false_positives": [
+        "H66001",
+        "H72301",
+        "Z680",
+        "Z7901",
+        "Z87291"
+      ],
+      "false_negatives": [
+        "E785",
+        "H7291",
+        "I10",
+        "K219",
+        "R7303",
+        "Z87891"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.14285714285714285,
+      "f1": 0.15384615384615383,
+      "num_api_codes": 6,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 9,
+      "hadm_id": 23682845,
+      "num_provided_codes": 22,
+      "num_true_missing": 0,
+      "num_api_missing": 6,
+      "elapsed_time": 7.874431133270264,
+      "true_positives": [],
+      "false_positives": [
+        "E8702",
+        "G40909",
+        "G9341",
+        "R4182",
+        "Z4682",
+        "Z79899"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 6,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 10,
+      "hadm_id": 29594531,
+      "num_provided_codes": 20,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 4.3447911739349365,
+      "true_positives": [],
+      "false_positives": [
+        "R531",
+        "Y929",
+        "Z452"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 11,
+      "hadm_id": 21599769,
+      "num_provided_codes": 13,
+      "num_true_missing": 8,
+      "num_api_missing": 5,
+      "elapsed_time": 10.358426094055176,
+      "true_positives": [],
+      "false_positives": [
+        "Bacteremia (ICD-10 code R7881)",
+        "E119",
+        "R5381",
+        "Z792",
+        "Z9221"
+      ],
+      "false_negatives": [
+        "D469",
+        "E1165",
+        "G4730",
+        "H5711",
+        "R5081",
+        "R7881",
+        "Z794",
+        "Z9484"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 12,
+      "hadm_id": 21242559,
+      "num_provided_codes": 1,
+      "num_true_missing": 5,
+      "num_api_missing": 4,
+      "elapsed_time": 8.138405799865723,
+      "true_positives": [
+        "R188",
+        "Z23"
+      ],
+      "false_positives": [
+        "K5660",
+        "Z4682"
+      ],
+      "false_negatives": [
+        "Z5331",
+        "Z7902",
+        "Z9884"
+      ],
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1": 0.4444444444444445,
+      "num_api_codes": 4,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 13,
+      "hadm_id": 28765431,
+      "num_provided_codes": 4,
+      "num_true_missing": 11,
+      "num_api_missing": 7,
+      "elapsed_time": 4.5223708152771,
+      "true_positives": [
+        "E871",
+        "I330"
+      ],
+      "false_positives": [
+        "B9562",
+        "F1120",
+        "F1520",
+        "F329",
+        "I2601"
+      ],
+      "false_negatives": [
+        "B182",
+        "B957",
+        "D638",
+        "E875",
+        "E8809",
+        "F1123",
+        "F1510",
+        "F17210",
+        "I2690"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.18181818181818182,
+      "f1": 0.2222222222222222,
+      "num_api_codes": 7,
+      "num_true_codes": 11
+    },
+    {
+      "idx": 14,
+      "hadm_id": 26663822,
+      "num_provided_codes": 19,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 3.576427936553955,
+      "true_positives": [],
+      "false_positives": [
+        "Z722",
+        "Z7901",
+        "Z79820"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 15,
+      "hadm_id": 28673189,
+      "num_provided_codes": 14,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 9.091050148010254,
+      "true_positives": [],
+      "false_positives": [
+        "Z4549",
+        "Z630",
+        "Z731"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 16,
+      "hadm_id": 29021855,
+      "num_provided_codes": 1,
+      "num_true_missing": 13,
+      "num_api_missing": 5,
+      "elapsed_time": 4.950924634933472,
+      "true_positives": [
+        "J45909",
+        "M329"
+      ],
+      "false_positives": [
+        "G43711",
+        "O132",
+        "O99342"
+      ],
+      "false_negatives": [
+        "G43919",
+        "M069",
+        "N858",
+        "O10912",
+        "O34219",
+        "O99012",
+        "O99512",
+        "O99842",
+        "O9989",
+        "Z3A23",
+        "Z87891"
+      ],
+      "precision": 0.4,
+      "recall": 0.15384615384615385,
+      "f1": 0.2222222222222222,
+      "num_api_codes": 5,
+      "num_true_codes": 13
+    },
+    {
+      "idx": 17,
+      "hadm_id": 27451900,
+      "num_provided_codes": 10,
+      "num_true_missing": 2,
+      "num_api_missing": 3,
+      "elapsed_time": 5.234863996505737,
+      "true_positives": [
+        "R338"
+      ],
+      "false_positives": [
+        "R42",
+        "Z5181"
+      ],
+      "false_negatives": [
+        "Z7901"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "num_api_codes": 3,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 18,
+      "hadm_id": 23610735,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 3.6756112575531006,
+      "true_positives": [],
+      "false_positives": [
+        "E870",
+        "F17210",
+        "R55"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 19,
+      "hadm_id": 25820516,
+      "num_provided_codes": 11,
+      "num_true_missing": 9,
+      "num_api_missing": 5,
+      "elapsed_time": 5.885639905929565,
+      "true_positives": [
+        "D62",
+        "R570"
+      ],
+      "false_positives": [
+        "E876",
+        "I5022",
+        "I739"
+      ],
+      "false_negatives": [
+        "E041",
+        "I110",
+        "I5023",
+        "I700",
+        "R578",
+        "R739",
+        "T45515A"
+      ],
+      "precision": 0.4,
+      "recall": 0.2222222222222222,
+      "f1": 0.2857142857142857,
+      "num_api_codes": 5,
+      "num_true_codes": 9
+    },
+    {
+      "idx": 20,
+      "hadm_id": 23374514,
+      "num_provided_codes": 6,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 3.5107100009918213,
+      "true_positives": [],
+      "false_positives": [
+        "T8183XA",
+        "Z23",
+        "Z79899"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 21,
+      "hadm_id": 22453080,
+      "num_provided_codes": 5,
+      "num_true_missing": 3,
+      "num_api_missing": 3,
+      "elapsed_time": 4.070934057235718,
+      "true_positives": [
+        "D649"
+      ],
+      "false_positives": [
+        "J0190",
+        "T814XXA"
+      ],
+      "false_negatives": [
+        "B950",
+        "Y929"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "f1": 0.3333333333333333,
+      "num_api_codes": 3,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 22,
+      "hadm_id": 29938054,
+      "num_provided_codes": 1,
+      "num_true_missing": 38,
+      "num_api_missing": 7,
+      "elapsed_time": 4.265872955322266,
+      "true_positives": [
+        "N189"
+      ],
+      "false_positives": [
+        "D471",
+        "D89810",
+        "I4891",
+        "I5032",
+        "I951",
+        "R6520"
+      ],
+      "false_negatives": [
+        "A4181",
+        "B370",
+        "B952",
+        "C8319",
+        "D46Z",
+        "D509",
+        "D89813",
+        "E8341",
+        "E8342",
+        "E872",
+        "E890",
+        "I081",
+        "I130",
+        "I2720",
+        "I428",
+        "I4819",
+        "I495",
+        "I5033",
+        "I82513",
+        "I82532",
+        "I82542",
+        "I82553",
+        "K219",
+        "K2270",
+        "K521",
+        "M109",
+        "M311",
+        "N183",
+        "T451X5S",
+        "T82594A",
+        "T827XXA",
+        "T865",
+        "Y830",
+        "Y848",
+        "Z1611",
+        "Z7901",
+        "Z87891"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.02631578947368421,
+      "f1": 0.044444444444444446,
+      "num_api_codes": 7,
+      "num_true_codes": 38
+    },
+    {
+      "idx": 23,
+      "hadm_id": 22845711,
+      "num_provided_codes": 16,
+      "num_true_missing": 11,
+      "num_api_missing": 6,
+      "elapsed_time": 4.902530670166016,
+      "true_positives": [
+        "Z992"
+      ],
+      "false_positives": [
+        "B9689",
+        "J9621",
+        "Z720",
+        "Z7901",
+        "Z940"
+      ],
+      "false_negatives": [
+        "C569",
+        "D631",
+        "D638",
+        "G893",
+        "I252",
+        "J9601",
+        "M19042",
+        "T8611",
+        "Z20822",
+        "Z515"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.09090909090909091,
+      "f1": 0.11764705882352942,
+      "num_api_codes": 6,
+      "num_true_codes": 11
+    },
+    {
+      "idx": 24,
+      "hadm_id": 26196402,
+      "num_provided_codes": 3,
+      "num_true_missing": 0,
+      "num_api_missing": 1,
+      "elapsed_time": 2.132330894470215,
+      "true_positives": [],
+      "false_positives": [
+        "Z23"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 1,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 25,
+      "hadm_id": 23417381,
+      "num_provided_codes": 1,
+      "num_true_missing": 17,
+      "num_api_missing": 8,
+      "elapsed_time": 4.006985902786255,
+      "true_positives": [
+        "B259",
+        "E8339",
+        "E876"
+      ],
+      "false_positives": [
+        "B509",
+        "D61818",
+        "D8981",
+        "R296",
+        "R7989"
+      ],
+      "false_negatives": [
+        "B9620",
+        "B9789",
+        "D469",
+        "D61810",
+        "D696",
+        "D849",
+        "D89813",
+        "F418",
+        "I10",
+        "M069",
+        "N3091",
+        "T375X5A",
+        "Y92239",
+        "Z9484"
+      ],
+      "precision": 0.375,
+      "recall": 0.17647058823529413,
+      "f1": 0.24,
+      "num_api_codes": 8,
+      "num_true_codes": 17
+    },
+    {
+      "idx": 26,
+      "hadm_id": 29922430,
+      "num_provided_codes": 16,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 5.795166015625,
+      "true_positives": [],
+      "false_positives": [
+        "E860",
+        "K529",
+        "R634",
+        "Z79899"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 27,
+      "hadm_id": 25547119,
+      "num_provided_codes": 8,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 5.760743856430054,
+      "true_positives": [],
+      "false_positives": [
+        "D8989",
+        "Z7902",
+        "Z79891",
+        "Z79899",
+        "Z940"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 28,
+      "hadm_id": 26370849,
+      "num_provided_codes": 10,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 7.0030012130737305,
+      "true_positives": [],
+      "false_positives": [
+        "R5381",
+        "Z515",
+        "Z7912",
+        "Z9181"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 29,
+      "hadm_id": 21173347,
+      "num_provided_codes": 1,
+      "num_true_missing": 12,
+      "num_api_missing": 6,
+      "elapsed_time": 6.339808225631714,
+      "true_positives": [
+        "E119",
+        "E785"
+      ],
+      "false_positives": [
+        "C786",
+        "F05",
+        "Z79891",
+        "Z955"
+      ],
+      "false_negatives": [
+        "C784",
+        "C7889",
+        "E43",
+        "G893",
+        "K5903",
+        "T402X5A",
+        "Y92230",
+        "Z20822",
+        "Z6824",
+        "Z96649"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.16666666666666666,
+      "f1": 0.2222222222222222,
+      "num_api_codes": 6,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 32,
+      "hadm_id": 27243918,
+      "num_provided_codes": 7,
+      "num_true_missing": 8,
+      "num_api_missing": 5,
+      "elapsed_time": 6.897091865539551,
+      "true_positives": [],
+      "false_positives": [
+        "D509",
+        "E272",
+        "E831",
+        "K5289",
+        "L989"
+      ],
+      "false_negatives": [
+        "D539",
+        "D721",
+        "E273",
+        "K5281",
+        "L409",
+        "R1031",
+        "T380X5S",
+        "T445X5S"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 33,
+      "hadm_id": 22831861,
+      "num_provided_codes": 1,
+      "num_true_missing": 24,
+      "num_api_missing": 7,
+      "elapsed_time": 18.161744832992554,
+      "true_positives": [
+        "I130",
+        "N170",
+        "N184"
+      ],
+      "false_positives": [
+        "A419",
+        "T8484XA",
+        "Z7409",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "D509",
+        "D631",
+        "E538",
+        "E860",
+        "E861",
+        "E872",
+        "F209",
+        "F4310",
+        "G479",
+        "I428",
+        "I5032",
+        "I959",
+        "L209",
+        "M159",
+        "N250",
+        "S92342A",
+        "S92352A",
+        "W1830XA",
+        "Y92009",
+        "Z86718",
+        "Z87891"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.125,
+      "f1": 0.19354838709677416,
+      "num_api_codes": 7,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 34,
+      "hadm_id": 24860113,
+      "num_provided_codes": 1,
+      "num_true_missing": 5,
+      "num_api_missing": 5,
+      "elapsed_time": 8.283230066299438,
+      "true_positives": [
+        "D62",
+        "T8061XA"
+      ],
+      "false_positives": [
+        "K9189",
+        "Z4682",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "Y848",
+        "Y92239",
+        "Z87891"
+      ],
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4000000000000001,
+      "num_api_codes": 5,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 35,
+      "hadm_id": 23228433,
+      "num_provided_codes": 2,
+      "num_true_missing": 24,
+      "num_api_missing": 7,
+      "elapsed_time": 7.543009996414185,
+      "true_positives": [
+        "A0472",
+        "N179",
+        "N390",
+        "Z794",
+        "Z950"
+      ],
+      "false_positives": [
+        "E119",
+        "Z992"
+      ],
+      "false_negatives": [
+        "B9620",
+        "D631",
+        "E1121",
+        "E1122",
+        "E1143",
+        "E785",
+        "E861",
+        "I160",
+        "I951",
+        "K7010",
+        "M79651",
+        "M79652",
+        "N186",
+        "N400",
+        "W19XXXA",
+        "Y92232",
+        "Z7289",
+        "Z7952",
+        "Z8674"
+      ],
+      "precision": 0.7142857142857143,
+      "recall": 0.20833333333333334,
+      "f1": 0.3225806451612903,
+      "num_api_codes": 7,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 37,
+      "hadm_id": 23991798,
+      "num_provided_codes": 1,
+      "num_true_missing": 16,
+      "num_api_missing": 9,
+      "elapsed_time": 10.740364074707031,
+      "true_positives": [
+        "E039",
+        "E1165",
+        "E785",
+        "G629",
+        "I10",
+        "K91840"
+      ],
+      "false_positives": [
+        "K921",
+        "Z86010",
+        "Z951"
+      ],
+      "false_negatives": [
+        "D62",
+        "I252",
+        "K635",
+        "T45525A",
+        "Y848",
+        "Y92239",
+        "Z7902",
+        "Z87891",
+        "Z950",
+        "Z955"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.375,
+      "f1": 0.4800000000000001,
+      "num_api_codes": 9,
+      "num_true_codes": 16
+    },
+    {
+      "idx": 39,
+      "hadm_id": 25192355,
+      "num_provided_codes": 6,
+      "num_true_missing": 8,
+      "num_api_missing": 4,
+      "elapsed_time": 6.616895914077759,
+      "true_positives": [
+        "D510"
+      ],
+      "false_positives": [
+        "E46",
+        "F329",
+        "R1310"
+      ],
+      "false_negatives": [
+        "D539",
+        "E43",
+        "R109",
+        "R1319",
+        "R519",
+        "Y929",
+        "Z20822"
+      ],
+      "precision": 0.25,
+      "recall": 0.125,
+      "f1": 0.16666666666666666,
+      "num_api_codes": 4,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 30,
+      "hadm_id": 21978017,
+      "num_provided_codes": 1,
+      "num_true_missing": 14,
+      "num_api_missing": 7,
+      "elapsed_time": 3.998706102371216,
+      "true_positives": [],
+      "false_positives": [
+        "D509",
+        "E119",
+        "E215",
+        "E46",
+        "R634",
+        "Z23",
+        "Z91410"
+      ],
+      "false_negatives": [
+        "D649",
+        "D72829",
+        "E13649",
+        "E1365",
+        "E440",
+        "E891",
+        "I10",
+        "K219",
+        "K8520",
+        "Z681",
+        "Z794",
+        "Z87891",
+        "Z90411",
+        "Z9049"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 7,
+      "num_true_codes": 14
+    },
+    {
+      "idx": 31,
+      "hadm_id": 26775845,
+      "num_provided_codes": 1,
+      "num_true_missing": 13,
+      "num_api_missing": 6,
+      "elapsed_time": 18.113537073135376,
+      "true_positives": [
+        "E119",
+        "E669",
+        "E785",
+        "K219"
+      ],
+      "false_positives": [
+        "F17210",
+        "G8221"
+      ],
+      "false_negatives": [
+        "G8311",
+        "I672",
+        "R209",
+        "Z20822",
+        "Z6825",
+        "Z7902",
+        "Z853",
+        "Z8673",
+        "Z87891"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.3076923076923077,
+      "f1": 0.42105263157894735,
+      "num_api_codes": 6,
+      "num_true_codes": 13
+    },
+    {
+      "idx": 36,
+      "hadm_id": 27703954,
+      "num_provided_codes": 11,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.7636032104492188,
+      "true_positives": [],
+      "false_positives": [
+        "R112",
+        "R630",
+        "Z7409"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 38,
+      "hadm_id": 25136561,
+      "num_provided_codes": 4,
+      "num_true_missing": 10,
+      "num_api_missing": 6,
+      "elapsed_time": 6.636264085769653,
+      "true_positives": [],
+      "false_positives": [
+        "I69341",
+        "J9600",
+        "J9690",
+        "R1310",
+        "Z8673",
+        "Z9001"
+      ],
+      "false_negatives": [
+        "C641",
+        "F419",
+        "G460",
+        "G8191",
+        "H5711",
+        "I10",
+        "J9691",
+        "K5900",
+        "Z20822",
+        "Z7901"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 6,
+      "num_true_codes": 10
+    },
+    {
+      "idx": 40,
+      "hadm_id": 21004671,
+      "num_provided_codes": 1,
+      "num_true_missing": 4,
+      "num_api_missing": 5,
+      "elapsed_time": 5.5080602169036865,
+      "true_positives": [
+        "E039",
+        "G40909",
+        "Z950"
+      ],
+      "false_positives": [
+        "F11920",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "I252"
+      ],
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6666666666666665,
+      "num_api_codes": 5,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 41,
+      "hadm_id": 22725354,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 5,
+      "elapsed_time": 3.4190378189086914,
+      "true_positives": [
+        "E039",
+        "I10",
+        "I726"
+      ],
+      "false_positives": [
+        "E785",
+        "R42"
+      ],
+      "false_negatives": [
+        "R519",
+        "R531",
+        "Z20822",
+        "Z87891"
+      ],
+      "precision": 0.6,
+      "recall": 0.42857142857142855,
+      "f1": 0.5,
+      "num_api_codes": 5,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 42,
+      "hadm_id": 21243652,
+      "num_provided_codes": 1,
+      "num_true_missing": 33,
+      "num_api_missing": 9,
+      "elapsed_time": 5.8929970264434814,
+      "true_positives": [
+        "D62"
+      ],
+      "false_positives": [
+        "A419",
+        "D684",
+        "J9600",
+        "K650",
+        "N179",
+        "T814",
+        "Z430",
+        "Z992"
+      ],
+      "false_negatives": [
+        "A4181",
+        "B3789",
+        "D689",
+        "E6601",
+        "E8342",
+        "E872",
+        "E8770",
+        "F419",
+        "G4700",
+        "I2720",
+        "I313",
+        "I471",
+        "J9601",
+        "J9692",
+        "K567",
+        "K651",
+        "K91870",
+        "K9189",
+        "M0760",
+        "N141",
+        "N170",
+        "R578",
+        "R6521",
+        "R739",
+        "T380X5A",
+        "T508X5A",
+        "T8140XA",
+        "Y832",
+        "Y838",
+        "Y92239",
+        "Z1622",
+        "Z6841"
+      ],
+      "precision": 0.1111111111111111,
+      "recall": 0.030303030303030304,
+      "f1": 0.047619047619047616,
+      "num_api_codes": 9,
+      "num_true_codes": 33
+    },
+    {
+      "idx": 43,
+      "hadm_id": 22538455,
+      "num_provided_codes": 7,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 4.958399057388306,
+      "true_positives": [],
+      "false_positives": [
+        "R269",
+        "Z7409",
+        "Z9114"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 44,
+      "hadm_id": 22245753,
+      "num_provided_codes": 18,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 4.385401964187622,
+      "true_positives": [],
+      "false_positives": [
+        "M62381",
+        "R4581",
+        "T83019",
+        "Z751"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 45,
+      "hadm_id": 24048569,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 2.395075798034668,
+      "true_positives": [],
+      "false_positives": [
+        "Z220",
+        "Z7401"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 46,
+      "hadm_id": 25911925,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 6,
+      "elapsed_time": 6.119174003601074,
+      "true_positives": [
+        "N179",
+        "N183",
+        "R55"
+      ],
+      "false_positives": [
+        "I10",
+        "R634",
+        "W19"
+      ],
+      "false_negatives": [
+        "I129",
+        "L409",
+        "R809",
+        "Z794"
+      ],
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.4615384615384615,
+      "num_api_codes": 6,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 47,
+      "hadm_id": 22524335,
+      "num_provided_codes": 1,
+      "num_true_missing": 6,
+      "num_api_missing": 5,
+      "elapsed_time": 3.9535980224609375,
+      "true_positives": [
+        "O3421",
+        "Z23"
+      ],
+      "false_positives": [
+        "O10013",
+        "O7181",
+        "Z3483"
+      ],
+      "false_negatives": [
+        "O1092",
+        "O700",
+        "Z370",
+        "Z3A35"
+      ],
+      "precision": 0.4,
+      "recall": 0.3333333333333333,
+      "f1": 0.3636363636363636,
+      "num_api_codes": 5,
+      "num_true_codes": 6
+    },
+    {
+      "idx": 48,
+      "hadm_id": 21748550,
+      "num_provided_codes": 1,
+      "num_true_missing": 32,
+      "num_api_missing": 7,
+      "elapsed_time": 7.772386074066162,
+      "true_positives": [
+        "E1122",
+        "F329",
+        "J9621",
+        "Z6841",
+        "Z9981"
+      ],
+      "false_positives": [
+        "I5031",
+        "L03112"
+      ],
+      "false_negatives": [
+        "B9561",
+        "D649",
+        "E1140",
+        "E6601",
+        "G4733",
+        "I2721",
+        "I5033",
+        "I770",
+        "I808",
+        "K219",
+        "K529",
+        "K649",
+        "K7460",
+        "L03114",
+        "M109",
+        "N142",
+        "N179",
+        "N184",
+        "T502X5A",
+        "T827XXA",
+        "T82898A",
+        "Y848",
+        "Y92239",
+        "Z21",
+        "Z66",
+        "Z794",
+        "Z87891"
+      ],
+      "precision": 0.7142857142857143,
+      "recall": 0.15625,
+      "f1": 0.25641025641025644,
+      "num_api_codes": 7,
+      "num_true_codes": 32
+    },
+    {
+      "idx": 49,
+      "hadm_id": 28260748,
+      "num_provided_codes": 1,
+      "num_true_missing": 16,
+      "num_api_missing": 9,
+      "elapsed_time": 9.950074911117554,
+      "true_positives": [
+        "F17210",
+        "I10",
+        "I820",
+        "R188",
+        "Z7901"
+      ],
+      "false_positives": [
+        "I8500",
+        "J449",
+        "K7460",
+        "R0602"
+      ],
+      "false_negatives": [
+        "I77819",
+        "I8510",
+        "K2270",
+        "K7469",
+        "K766",
+        "Y838",
+        "Y92009",
+        "Z20822",
+        "Z7289",
+        "Z7902",
+        "Z8042"
+      ],
+      "precision": 0.5555555555555556,
+      "recall": 0.3125,
+      "f1": 0.39999999999999997,
+      "num_api_codes": 9,
+      "num_true_codes": 16
+    },
+    {
+      "idx": 50,
+      "hadm_id": 24260078,
+      "num_provided_codes": 1,
+      "num_true_missing": 38,
+      "num_api_missing": 7,
+      "elapsed_time": 5.875990867614746,
+      "true_positives": [
+        "D62",
+        "E1043",
+        "N179"
+      ],
+      "false_positives": [
+        "I82832",
+        "L0291",
+        "M86171",
+        "Z452"
+      ],
+      "false_negatives": [
+        "B952",
+        "B9562",
+        "B964",
+        "E1021",
+        "E1022",
+        "E103593",
+        "E1042",
+        "E10649",
+        "E1065",
+        "E1069",
+        "E860",
+        "E876",
+        "E8770",
+        "F419",
+        "F4324",
+        "G253",
+        "G8929",
+        "I129",
+        "I82622",
+        "K2080",
+        "K3184",
+        "L02416",
+        "M8618",
+        "N189",
+        "R748",
+        "R7989",
+        "T402X5A",
+        "T82868D",
+        "T879",
+        "Y838",
+        "Y848",
+        "Y92009",
+        "Y92239",
+        "Z20822",
+        "Z9641"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.07894736842105263,
+      "f1": 0.13333333333333333,
+      "num_api_codes": 7,
+      "num_true_codes": 38
+    },
+    {
+      "idx": 51,
+      "hadm_id": 27013167,
+      "num_provided_codes": 9,
+      "num_true_missing": 11,
+      "num_api_missing": 6,
+      "elapsed_time": 3.5647993087768555,
+      "true_positives": [
+        "N179"
+      ],
+      "false_positives": [
+        "E271",
+        "E872",
+        "I509",
+        "J45990",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "E2740",
+        "G8929",
+        "I420",
+        "I5023",
+        "L309",
+        "M109",
+        "N8311",
+        "T380X5A",
+        "Z794",
+        "Z91128"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.09090909090909091,
+      "f1": 0.11764705882352942,
+      "num_api_codes": 6,
+      "num_true_codes": 11
+    },
+    {
+      "idx": 52,
+      "hadm_id": 25631609,
+      "num_provided_codes": 1,
+      "num_true_missing": 24,
+      "num_api_missing": 8,
+      "elapsed_time": 15.160565853118896,
+      "true_positives": [
+        "D62",
+        "E43",
+        "J90",
+        "K921"
+      ],
+      "false_positives": [
+        "R190",
+        "Z4801",
+        "Z5111",
+        "Z5181"
+      ],
+      "false_negatives": [
+        "C169",
+        "C189",
+        "D509",
+        "D860",
+        "E785",
+        "E8770",
+        "E8809",
+        "G4700",
+        "G620",
+        "G893",
+        "K222",
+        "M48061",
+        "R180",
+        "R911",
+        "T451X5D",
+        "Z20822",
+        "Z681",
+        "Z7901",
+        "Z86711",
+        "Z933"
+      ],
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "f1": 0.25,
+      "num_api_codes": 8,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 53,
+      "hadm_id": 26528156,
+      "num_provided_codes": 1,
+      "num_true_missing": 17,
+      "num_api_missing": 6,
+      "elapsed_time": 4.724107027053833,
+      "true_positives": [
+        "B181",
+        "B659",
+        "D61818",
+        "I81",
+        "N179"
+      ],
+      "false_positives": [
+        "E43"
+      ],
+      "false_negatives": [
+        "B998",
+        "D689",
+        "E440",
+        "I808",
+        "R188",
+        "R918",
+        "T8029XA",
+        "Y848",
+        "Y92239",
+        "Z20822",
+        "Z681",
+        "Z87891"
+      ],
+      "precision": 0.8333333333333334,
+      "recall": 0.29411764705882354,
+      "f1": 0.4347826086956522,
+      "num_api_codes": 6,
+      "num_true_codes": 17
+    },
+    {
+      "idx": 54,
+      "hadm_id": 27100189,
+      "num_provided_codes": 5,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.82968807220459,
+      "true_positives": [],
+      "false_positives": [
+        "T454X5A",
+        "Z432",
+        "Z452"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 55,
+      "hadm_id": 29916373,
+      "num_provided_codes": 1,
+      "num_true_missing": 4,
+      "num_api_missing": 7,
+      "elapsed_time": 4.2413060665130615,
+      "true_positives": [
+        "C8510",
+        "M4856XD",
+        "N7011"
+      ],
+      "false_positives": [
+        "R52",
+        "Z4889",
+        "Z7409",
+        "Z742"
+      ],
+      "false_negatives": [
+        "R109"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "f1": 0.5454545454545454,
+      "num_api_codes": 7,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 56,
+      "hadm_id": 22890049,
+      "num_provided_codes": 5,
+      "num_true_missing": 1,
+      "num_api_missing": 3,
+      "elapsed_time": 2.5601232051849365,
+      "true_positives": [],
+      "false_positives": [
+        "M791",
+        "R070",
+        "R509"
+      ],
+      "false_negatives": [
+        "D649"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 1
+    },
+    {
+      "idx": 57,
+      "hadm_id": 23946717,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 11.947750091552734,
+      "true_positives": [],
+      "false_positives": [
+        "F17200",
+        "G8918",
+        "R262",
+        "Z720",
+        "Z913"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 58,
+      "hadm_id": 25392990,
+      "num_provided_codes": 1,
+      "num_true_missing": 12,
+      "num_api_missing": 5,
+      "elapsed_time": 3.794538974761963,
+      "true_positives": [
+        "F0391",
+        "F05",
+        "R32",
+        "Z66"
+      ],
+      "false_positives": [
+        "A047"
+      ],
+      "false_negatives": [
+        "B9620",
+        "D696",
+        "J309",
+        "M1990",
+        "M545",
+        "R197",
+        "Z87891",
+        "Z961"
+      ],
+      "precision": 0.8,
+      "recall": 0.3333333333333333,
+      "f1": 0.47058823529411764,
+      "num_api_codes": 5,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 59,
+      "hadm_id": 29196120,
+      "num_provided_codes": 1,
+      "num_true_missing": 16,
+      "num_api_missing": 7,
+      "elapsed_time": 4.041671991348267,
+      "true_positives": [
+        "C259",
+        "C787",
+        "E119",
+        "E785",
+        "E871",
+        "I10"
+      ],
+      "false_positives": [
+        "M8440XA"
+      ],
+      "false_negatives": [
+        "B9620",
+        "D649",
+        "E860",
+        "H9190",
+        "I208",
+        "K521",
+        "K6289",
+        "M8448XA",
+        "R112",
+        "T451X5A"
+      ],
+      "precision": 0.8571428571428571,
+      "recall": 0.375,
+      "f1": 0.5217391304347825,
+      "num_api_codes": 7,
+      "num_true_codes": 16
+    },
+    {
+      "idx": 60,
+      "hadm_id": 22519228,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 1,
+      "elapsed_time": 1.7740447521209717,
+      "true_positives": [],
+      "false_positives": [
+        "O99813"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 1,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 61,
+      "hadm_id": 20069812,
+      "num_provided_codes": 17,
+      "num_true_missing": 0,
+      "num_api_missing": 7,
+      "elapsed_time": 5.095479965209961,
+      "true_positives": [],
+      "false_positives": [
+        "E160",
+        "F0100",
+        "J441",
+        "K858",
+        "R1989",
+        "Z515",
+        "Z7952"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 7,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 62,
+      "hadm_id": 22472998,
+      "num_provided_codes": 1,
+      "num_true_missing": 17,
+      "num_api_missing": 8,
+      "elapsed_time": 7.856403112411499,
+      "true_positives": [
+        "E871",
+        "N179"
+      ],
+      "false_positives": [
+        "A047",
+        "C7931",
+        "D62",
+        "E162",
+        "R701",
+        "T81519A"
+      ],
+      "false_negatives": [
+        "A0472",
+        "C498",
+        "C7800",
+        "C786",
+        "D6481",
+        "D72823",
+        "E1165",
+        "E785",
+        "F419",
+        "I10",
+        "I2510",
+        "K219",
+        "Z794",
+        "Z87891",
+        "Z9119"
+      ],
+      "precision": 0.25,
+      "recall": 0.11764705882352941,
+      "f1": 0.15999999999999998,
+      "num_api_codes": 8,
+      "num_true_codes": 17
+    },
+    {
+      "idx": 63,
+      "hadm_id": 20340685,
+      "num_provided_codes": 11,
+      "num_true_missing": 1,
+      "num_api_missing": 4,
+      "elapsed_time": 6.092402935028076,
+      "true_positives": [],
+      "false_positives": [
+        "J4520",
+        "Z0000",
+        "Z79891",
+        "Z9224"
+      ],
+      "false_negatives": [
+        "B182"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 1
+    },
+    {
+      "idx": 64,
+      "hadm_id": 23166682,
+      "num_provided_codes": 1,
+      "num_true_missing": 10,
+      "num_api_missing": 9,
+      "elapsed_time": 11.0962553024292,
+      "true_positives": [
+        "E039",
+        "J45909",
+        "K219"
+      ],
+      "false_positives": [
+        "E119",
+        "F17210",
+        "G250",
+        "I2729",
+        "I509",
+        "Z92082"
+      ],
+      "false_negatives": [
+        "E118",
+        "G2581",
+        "G4733",
+        "I081",
+        "I272",
+        "I5033",
+        "Z87891"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.3,
+      "f1": 0.3157894736842105,
+      "num_api_codes": 9,
+      "num_true_codes": 10
+    },
+    {
+      "idx": 65,
+      "hadm_id": 20600010,
+      "num_provided_codes": 1,
+      "num_true_missing": 8,
+      "num_api_missing": 6,
+      "elapsed_time": 4.698807954788208,
+      "true_positives": [
+        "B001",
+        "D259",
+        "F419",
+        "G4700",
+        "M5430"
+      ],
+      "false_positives": [
+        "Z79899"
+      ],
+      "false_negatives": [
+        "R112",
+        "Z807",
+        "Z87440"
+      ],
+      "precision": 0.8333333333333334,
+      "recall": 0.625,
+      "f1": 0.7142857142857143,
+      "num_api_codes": 6,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 66,
+      "hadm_id": 23145360,
+      "num_provided_codes": 18,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 3.625333786010742,
+      "true_positives": [],
+      "false_positives": [
+        "R4182",
+        "Z7401"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 67,
+      "hadm_id": 28741882,
+      "num_provided_codes": 11,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 4.670151948928833,
+      "true_positives": [],
+      "false_positives": [
+        "D6861",
+        "E553",
+        "E6601",
+        "J9690",
+        "Z430"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 68,
+      "hadm_id": 22630832,
+      "num_provided_codes": 24,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 3.184152126312256,
+      "true_positives": [],
+      "false_positives": [
+        "D62",
+        "R58",
+        "Z590",
+        "Z721"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 69,
+      "hadm_id": 22895153,
+      "num_provided_codes": 1,
+      "num_true_missing": 12,
+      "num_api_missing": 9,
+      "elapsed_time": 6.009541034698486,
+      "true_positives": [
+        "E039",
+        "E785",
+        "F0150",
+        "I259",
+        "Z87891",
+        "Z905"
+      ],
+      "false_positives": [
+        "F89",
+        "R590",
+        "Z48812"
+      ],
+      "false_negatives": [
+        "D472",
+        "E119",
+        "I252",
+        "R05",
+        "Z8553",
+        "Z90710"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285715,
+      "num_api_codes": 9,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 70,
+      "hadm_id": 28779650,
+      "num_provided_codes": 17,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 5.924206972122192,
+      "true_positives": [],
+      "false_positives": [
+        "I38",
+        "R509",
+        "Z452",
+        "Z466",
+        "Z792"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 71,
+      "hadm_id": 21938857,
+      "num_provided_codes": 10,
+      "num_true_missing": 0,
+      "num_api_missing": 6,
+      "elapsed_time": 7.7143309116363525,
+      "true_positives": [],
+      "false_positives": [
+        "E878",
+        "R112",
+        "R42",
+        "R531",
+        "Z5181",
+        "Z79891"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 6,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 72,
+      "hadm_id": 24392401,
+      "num_provided_codes": 5,
+      "num_true_missing": 8,
+      "num_api_missing": 8,
+      "elapsed_time": 4.913158893585205,
+      "true_positives": [
+        "F329",
+        "I10"
+      ],
+      "false_positives": [
+        "F17210",
+        "R633",
+        "R942",
+        "T45515A",
+        "Z7901",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "E8352",
+        "J700",
+        "R4182",
+        "Y929",
+        "Z85118",
+        "Z87891"
+      ],
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "num_api_codes": 8,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 73,
+      "hadm_id": 25991123,
+      "num_provided_codes": 1,
+      "num_true_missing": 5,
+      "num_api_missing": 4,
+      "elapsed_time": 6.307033061981201,
+      "true_positives": [],
+      "false_positives": [
+        "F3281",
+        "R079",
+        "R5381",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "D696",
+        "I2510",
+        "I4892",
+        "Z9119",
+        "Z951"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 74,
+      "hadm_id": 22929361,
+      "num_provided_codes": 18,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 6.182029962539673,
+      "true_positives": [],
+      "false_positives": [
+        "F419",
+        "R4581",
+        "Z515",
+        "Z746"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 75,
+      "hadm_id": 21856949,
+      "num_provided_codes": 1,
+      "num_true_missing": 14,
+      "num_api_missing": 5,
+      "elapsed_time": 4.220871925354004,
+      "true_positives": [
+        "I447",
+        "I951"
+      ],
+      "false_positives": [
+        "E161",
+        "E871",
+        "R4781"
+      ],
+      "false_negatives": [
+        "E119",
+        "E785",
+        "E860",
+        "F329",
+        "F411",
+        "I10",
+        "J45909",
+        "L409",
+        "M069",
+        "R4701",
+        "Z20822",
+        "Z87891"
+      ],
+      "precision": 0.4,
+      "recall": 0.14285714285714285,
+      "f1": 0.21052631578947364,
+      "num_api_codes": 5,
+      "num_true_codes": 14
+    },
+    {
+      "idx": 76,
+      "hadm_id": 29666157,
+      "num_provided_codes": 7,
+      "num_true_missing": 0,
+      "num_api_missing": 7,
+      "elapsed_time": 5.522585868835449,
+      "true_positives": [],
+      "false_positives": [
+        "E87818",
+        "R219",
+        "R509",
+        "T383X5A",
+        "T503X1A",
+        "Z23",
+        "Z794"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 7,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 77,
+      "hadm_id": 21373289,
+      "num_provided_codes": 1,
+      "num_true_missing": 4,
+      "num_api_missing": 6,
+      "elapsed_time": 3.5309717655181885,
+      "true_positives": [
+        "D891",
+        "M351",
+        "Z20822"
+      ],
+      "false_positives": [
+        "M2550",
+        "M791",
+        "R509"
+      ],
+      "false_negatives": [
+        "M064"
+      ],
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "num_api_codes": 6,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 78,
+      "hadm_id": 21631933,
+      "num_provided_codes": 1,
+      "num_true_missing": 6,
+      "num_api_missing": 6,
+      "elapsed_time": 4.963917016983032,
+      "true_positives": [
+        "D62",
+        "E669",
+        "I10"
+      ],
+      "false_positives": [
+        "T814XXA",
+        "Z23",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "M9689",
+        "Y838",
+        "Z6833"
+      ],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "num_api_codes": 6,
+      "num_true_codes": 6
+    },
+    {
+      "idx": 79,
+      "hadm_id": 26101893,
+      "num_provided_codes": 1,
+      "num_true_missing": 24,
+      "num_api_missing": 7,
+      "elapsed_time": 6.014761209487915,
+      "true_positives": [
+        "E876",
+        "I739",
+        "J45909",
+        "N189",
+        "R0902"
+      ],
+      "false_positives": [
+        "I10",
+        "R6521"
+      ],
+      "false_negatives": [
+        "D120",
+        "D123",
+        "E669",
+        "E785",
+        "E872",
+        "H3530",
+        "H8110",
+        "I129",
+        "K219",
+        "M1990",
+        "M8580",
+        "R000",
+        "R400",
+        "T4145XA",
+        "Y848",
+        "Y92234",
+        "Z1211",
+        "Z6837",
+        "Z86010"
+      ],
+      "precision": 0.7142857142857143,
+      "recall": 0.20833333333333334,
+      "f1": 0.3225806451612903,
+      "num_api_codes": 7,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 80,
+      "hadm_id": 28741164,
+      "num_provided_codes": 1,
+      "num_true_missing": 13,
+      "num_api_missing": 10,
+      "elapsed_time": 8.432339191436768,
+      "true_positives": [
+        "E785",
+        "E871",
+        "I10",
+        "J9811",
+        "N179",
+        "R0902"
+      ],
+      "false_positives": [
+        "F17210",
+        "Z720",
+        "Z7901",
+        "Z794"
+      ],
+      "false_negatives": [
+        "D649",
+        "D72829",
+        "E119",
+        "E860",
+        "E8770",
+        "K219",
+        "Z87891"
+      ],
+      "precision": 0.6,
+      "recall": 0.46153846153846156,
+      "f1": 0.5217391304347826,
+      "num_api_codes": 10,
+      "num_true_codes": 13
+    },
+    {
+      "idx": 81,
+      "hadm_id": 28327193,
+      "num_provided_codes": 10,
+      "num_true_missing": 10,
+      "num_api_missing": 4,
+      "elapsed_time": 6.149037837982178,
+      "true_positives": [],
+      "false_positives": [
+        "I25010",
+        "I25113",
+        "I5022",
+        "J09X2"
+      ],
+      "false_negatives": [
+        "I129",
+        "I25118",
+        "I420",
+        "I472",
+        "I5023",
+        "N189",
+        "Z23",
+        "Z8679",
+        "Z8711",
+        "Z95810"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 10
+    },
+    {
+      "idx": 82,
+      "hadm_id": 22090037,
+      "num_provided_codes": 6,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 3.3643739223480225,
+      "true_positives": [],
+      "false_positives": [
+        "O80",
+        "Z23",
+        "Z390"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 83,
+      "hadm_id": 29814531,
+      "num_provided_codes": 8,
+      "num_true_missing": 2,
+      "num_api_missing": 5,
+      "elapsed_time": 6.086282014846802,
+      "true_positives": [],
+      "false_positives": [
+        "F17210",
+        "J101",
+        "R197",
+        "R509",
+        "Z9115"
+      ],
+      "false_negatives": [
+        "R7401",
+        "Z8619"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 84,
+      "hadm_id": 29576020,
+      "num_provided_codes": 1,
+      "num_true_missing": 21,
+      "num_api_missing": 8,
+      "elapsed_time": 5.004350900650024,
+      "true_positives": [
+        "C9100",
+        "D62",
+        "I10",
+        "K831"
+      ],
+      "false_positives": [
+        "B182",
+        "D649",
+        "D701",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "B1920",
+        "D638",
+        "D709",
+        "F419",
+        "G4700",
+        "G629",
+        "I952",
+        "K7460",
+        "K830",
+        "L271",
+        "T361X5A",
+        "T447X5A",
+        "T85520A",
+        "T85590A",
+        "Y92019",
+        "Y92238",
+        "Z8589"
+      ],
+      "precision": 0.5,
+      "recall": 0.19047619047619047,
+      "f1": 0.27586206896551724,
+      "num_api_codes": 8,
+      "num_true_codes": 21
+    },
+    {
+      "idx": 85,
+      "hadm_id": 21607181,
+      "num_provided_codes": 8,
+      "num_true_missing": 9,
+      "num_api_missing": 4,
+      "elapsed_time": 3.5073792934417725,
+      "true_positives": [
+        "E43"
+      ],
+      "false_positives": [
+        "I82409",
+        "R4182",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "C679",
+        "C799",
+        "G629",
+        "M62838",
+        "N400",
+        "T402X5A",
+        "Z20828",
+        "Z515"
+      ],
+      "precision": 0.25,
+      "recall": 0.1111111111111111,
+      "f1": 0.15384615384615383,
+      "num_api_codes": 4,
+      "num_true_codes": 9
+    },
+    {
+      "idx": 86,
+      "hadm_id": 20103067,
+      "num_provided_codes": 1,
+      "num_true_missing": 20,
+      "num_api_missing": 6,
+      "elapsed_time": 6.490382194519043,
+      "true_positives": [
+        "D62",
+        "I21A1",
+        "I5032"
+      ],
+      "false_positives": [
+        "E43",
+        "E871",
+        "F3281"
+      ],
+      "false_negatives": [
+        "E222",
+        "E440",
+        "E785",
+        "I110",
+        "I25110",
+        "I252",
+        "I951",
+        "R1312",
+        "Y831",
+        "Y92239",
+        "Z006",
+        "Z6825",
+        "Z8249",
+        "Z8546",
+        "Z85828",
+        "Z87891",
+        "Z955"
+      ],
+      "precision": 0.5,
+      "recall": 0.15,
+      "f1": 0.23076923076923075,
+      "num_api_codes": 6,
+      "num_true_codes": 20
+    },
+    {
+      "idx": 87,
+      "hadm_id": 23576063,
+      "num_provided_codes": 15,
+      "num_true_missing": 0,
+      "num_api_missing": 7,
+      "elapsed_time": 4.102099895477295,
+      "true_positives": [],
+      "false_positives": [
+        "E860",
+        "E872",
+        "E877",
+        "R41082",
+        "R5381",
+        "Z7901",
+        "Z992"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 7,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 88,
+      "hadm_id": 22375635,
+      "num_provided_codes": 5,
+      "num_true_missing": 3,
+      "num_api_missing": 5,
+      "elapsed_time": 5.716289758682251,
+      "true_positives": [
+        "I2510"
+      ],
+      "false_positives": [
+        "I509",
+        "R0602",
+        "Z7902",
+        "Z7983"
+      ],
+      "false_negatives": [
+        "I10",
+        "Q231"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "f1": 0.25,
+      "num_api_codes": 5,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 89,
+      "hadm_id": 23362802,
+      "num_provided_codes": 1,
+      "num_true_missing": 22,
+      "num_api_missing": 4,
+      "elapsed_time": 3.8775949478149414,
+      "true_positives": [
+        "C8510",
+        "I8510",
+        "J690",
+        "R188"
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        "D732",
+        "E039",
+        "E781",
+        "E806",
+        "I10",
+        "I129",
+        "K209",
+        "K529",
+        "K5900",
+        "K598",
+        "K7469",
+        "K8020",
+        "N189",
+        "N400",
+        "R0902",
+        "Z7982",
+        "Z9049",
+        "Z9079"
+      ],
+      "precision": 1.0,
+      "recall": 0.18181818181818182,
+      "f1": 0.3076923076923077,
+      "num_api_codes": 4,
+      "num_true_codes": 22
+    },
+    {
+      "idx": 90,
+      "hadm_id": 20237633,
+      "num_provided_codes": 15,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.6621623039245605,
+      "true_positives": [],
+      "false_positives": [
+        "D696",
+        "E119",
+        "J449"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 91,
+      "hadm_id": 29520901,
+      "num_provided_codes": 27,
+      "num_true_missing": 2,
+      "num_api_missing": 4,
+      "elapsed_time": 2.1183831691741943,
+      "true_positives": [],
+      "false_positives": [
+        "I951",
+        "R4182",
+        "R5383",
+        "Z992"
+      ],
+      "false_negatives": [
+        "E8351",
+        "Z953"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 92,
+      "hadm_id": 25779923,
+      "num_provided_codes": 1,
+      "num_true_missing": 5,
+      "num_api_missing": 6,
+      "elapsed_time": 3.645735025405884,
+      "true_positives": [
+        "E785",
+        "F17210",
+        "I10",
+        "M6208",
+        "Z9049"
+      ],
+      "false_positives": [
+        "Z7901"
+      ],
+      "false_negatives": [],
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091,
+      "num_api_codes": 6,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 93,
+      "hadm_id": 20200839,
+      "num_provided_codes": 10,
+      "num_true_missing": 5,
+      "num_api_missing": 5,
+      "elapsed_time": 6.836022615432739,
+      "true_positives": [],
+      "false_positives": [
+        "R17",
+        "R208",
+        "Z515",
+        "Z79891",
+        "Z9889"
+      ],
+      "false_negatives": [
+        "D135",
+        "G4733",
+        "K219",
+        "N400",
+        "Z9119"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 94,
+      "hadm_id": 27678639,
+      "num_provided_codes": 6,
+      "num_true_missing": 28,
+      "num_api_missing": 9,
+      "elapsed_time": 6.330725908279419,
+      "true_positives": [
+        "E1122",
+        "I2510",
+        "I4891",
+        "N186",
+        "Z992"
+      ],
+      "false_positives": [
+        "F329",
+        "I509",
+        "J45909",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "D469",
+        "D509",
+        "D631",
+        "E538",
+        "E559",
+        "E7800",
+        "E861",
+        "E8809",
+        "G4733",
+        "I248",
+        "I252",
+        "I272",
+        "I5042",
+        "I959",
+        "K219",
+        "T447X5A",
+        "T502X5A",
+        "Y929",
+        "Z8711",
+        "Z87891",
+        "Z951",
+        "Z953",
+        "Z9884"
+      ],
+      "precision": 0.5555555555555556,
+      "recall": 0.17857142857142858,
+      "f1": 0.2702702702702703,
+      "num_api_codes": 9,
+      "num_true_codes": 28
+    },
+    {
+      "idx": 95,
+      "hadm_id": 28634240,
+      "num_provided_codes": 17,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 2.044349193572998,
+      "true_positives": [],
+      "false_positives": [
+        "E039",
+        "E1165"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 96,
+      "hadm_id": 23159330,
+      "num_provided_codes": 3,
+      "num_true_missing": 4,
+      "num_api_missing": 3,
+      "elapsed_time": 5.649091005325317,
+      "true_positives": [
+        "E039"
+      ],
+      "false_positives": [
+        "K8010",
+        "Z791"
+      ],
+      "false_negatives": [
+        "K219",
+        "K8000",
+        "O99282"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.25,
+      "f1": 0.28571428571428575,
+      "num_api_codes": 3,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 97,
+      "hadm_id": 29282866,
+      "num_provided_codes": 1,
+      "num_true_missing": 14,
+      "num_api_missing": 13,
+      "elapsed_time": 8.905273675918579,
+      "true_positives": [
+        "F05",
+        "G4700",
+        "I10",
+        "I4891",
+        "N390",
+        "Z7901"
+      ],
+      "false_positives": [
+        "L03316",
+        "R32",
+        "R509",
+        "R778",
+        "T887",
+        "Z23",
+        "Z5181"
+      ],
+      "false_negatives": [
+        "I083",
+        "I2720",
+        "L03314",
+        "L98491",
+        "N39498",
+        "R740",
+        "Z8546",
+        "Z9119"
+      ],
+      "precision": 0.46153846153846156,
+      "recall": 0.42857142857142855,
+      "f1": 0.4444444444444445,
+      "num_api_codes": 13,
+      "num_true_codes": 14
+    },
+    {
+      "idx": 98,
+      "hadm_id": 23950874,
+      "num_provided_codes": 15,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 3.117543935775757,
+      "true_positives": [],
+      "false_positives": [
+        "G8929",
+        "T8539XA",
+        "Z4802",
+        "Z794"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 99,
+      "hadm_id": 24379947,
+      "num_provided_codes": 19,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 2.670330047607422,
+      "true_positives": [],
+      "false_positives": [
+        "R262",
+        "Z7409"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 100,
+      "hadm_id": 24181545,
+      "num_provided_codes": 10,
+      "num_true_missing": 1,
+      "num_api_missing": 3,
+      "elapsed_time": 3.7879488468170166,
+      "true_positives": [
+        "J45909"
+      ],
+      "false_positives": [
+        "F411",
+        "R119"
+      ],
+      "false_negatives": [],
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "num_api_codes": 3,
+      "num_true_codes": 1
+    },
+    {
+      "idx": 101,
+      "hadm_id": 22034601,
+      "num_provided_codes": 14,
+      "num_true_missing": 4,
+      "num_api_missing": 3,
+      "elapsed_time": 2.6634249687194824,
+      "true_positives": [],
+      "false_positives": [
+        "I2692",
+        "R4182",
+        "T45515A"
+      ],
+      "false_negatives": [
+        "E041",
+        "I2699",
+        "L299",
+        "Z20822"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 102,
+      "hadm_id": 27474788,
+      "num_provided_codes": 1,
+      "num_true_missing": 17,
+      "num_api_missing": 8,
+      "elapsed_time": 7.775442123413086,
+      "true_positives": [
+        "E43",
+        "F329",
+        "I10",
+        "Z515",
+        "Z90710"
+      ],
+      "false_positives": [
+        "K709",
+        "R188",
+        "R58"
+      ],
+      "false_negatives": [
+        "C792",
+        "D689",
+        "D72819",
+        "E785",
+        "G8918",
+        "K219",
+        "K5900",
+        "R180",
+        "R441",
+        "Z6826",
+        "Z7901",
+        "Z86711"
+      ],
+      "precision": 0.625,
+      "recall": 0.29411764705882354,
+      "f1": 0.4,
+      "num_api_codes": 8,
+      "num_true_codes": 17
+    },
+    {
+      "idx": 103,
+      "hadm_id": 29091191,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.911956787109375,
+      "true_positives": [],
+      "false_positives": [
+        "R630",
+        "R8290",
+        "Z7901"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 104,
+      "hadm_id": 29764550,
+      "num_provided_codes": 9,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 2.7566866874694824,
+      "true_positives": [],
+      "false_positives": [
+        "Z390",
+        "Z79890"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 105,
+      "hadm_id": 20303600,
+      "num_provided_codes": 1,
+      "num_true_missing": 12,
+      "num_api_missing": 5,
+      "elapsed_time": 5.798006772994995,
+      "true_positives": [
+        "A020",
+        "I5021"
+      ],
+      "false_positives": [
+        "I514",
+        "Y655",
+        "Z95828"
+      ],
+      "false_negatives": [
+        "F1010",
+        "I240",
+        "I400",
+        "I428",
+        "I462",
+        "R402112",
+        "R402212",
+        "R402312",
+        "R740",
+        "Z006"
+      ],
+      "precision": 0.4,
+      "recall": 0.16666666666666666,
+      "f1": 0.23529411764705882,
+      "num_api_codes": 5,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 106,
+      "hadm_id": 20830142,
+      "num_provided_codes": 10,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.4637980461120605,
+      "true_positives": [],
+      "false_positives": [
+        "E669",
+        "R410",
+        "T43591A"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 107,
+      "hadm_id": 21904622,
+      "num_provided_codes": 1,
+      "num_true_missing": 17,
+      "num_api_missing": 7,
+      "elapsed_time": 4.955621957778931,
+      "true_positives": [
+        "C7951",
+        "E039"
+      ],
+      "false_positives": [
+        "F410",
+        "I951",
+        "M810",
+        "Z9181",
+        "Z9989"
+      ],
+      "false_negatives": [
+        "E785",
+        "F419",
+        "G43909",
+        "G4700",
+        "G8929",
+        "I10",
+        "K219",
+        "K5903",
+        "M1990",
+        "M549",
+        "R296",
+        "R55",
+        "T40425A",
+        "Z8615",
+        "Z8673"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.11764705882352941,
+      "f1": 0.16666666666666666,
+      "num_api_codes": 7,
+      "num_true_codes": 17
+    },
+    {
+      "idx": 108,
+      "hadm_id": 24415613,
+      "num_provided_codes": 1,
+      "num_true_missing": 12,
+      "num_api_missing": 6,
+      "elapsed_time": 5.387450933456421,
+      "true_positives": [
+        "E119",
+        "I10",
+        "K760",
+        "N179"
+      ],
+      "false_positives": [
+        "K8050",
+        "Z720"
+      ],
+      "false_negatives": [
+        "D649",
+        "D696",
+        "D72829",
+        "K719",
+        "K8021",
+        "T50905A",
+        "Y92239",
+        "Z87891"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.3333333333333333,
+      "f1": 0.4444444444444444,
+      "num_api_codes": 6,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 109,
+      "hadm_id": 27946246,
+      "num_provided_codes": 1,
+      "num_true_missing": 6,
+      "num_api_missing": 7,
+      "elapsed_time": 5.624654054641724,
+      "true_positives": [
+        "E039",
+        "E785",
+        "I10",
+        "I739",
+        "Z96649"
+      ],
+      "false_positives": [
+        "F17210",
+        "Z23"
+      ],
+      "false_negatives": [
+        "Z87891"
+      ],
+      "precision": 0.7142857142857143,
+      "recall": 0.8333333333333334,
+      "f1": 0.7692307692307692,
+      "num_api_codes": 7,
+      "num_true_codes": 6
+    },
+    {
+      "idx": 110,
+      "hadm_id": 26274235,
+      "num_provided_codes": 6,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 4.684723854064941,
+      "true_positives": [],
+      "false_positives": [
+        "F329",
+        "Z5189"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 113,
+      "hadm_id": 28547562,
+      "num_provided_codes": 1,
+      "num_true_missing": 2,
+      "num_api_missing": 6,
+      "elapsed_time": 6.924694061279297,
+      "true_positives": [
+        "Z800",
+        "Z803"
+      ],
+      "false_positives": [
+        "Z23",
+        "Z5181",
+        "Z79891",
+        "Z79899"
+      ],
+      "false_negatives": [],
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "num_api_codes": 6,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 115,
+      "hadm_id": 28007762,
+      "num_provided_codes": 1,
+      "num_true_missing": 24,
+      "num_api_missing": 7,
+      "elapsed_time": 10.95346212387085,
+      "true_positives": [
+        "J1282",
+        "J690",
+        "J9601"
+      ],
+      "false_positives": [
+        "D696",
+        "E871",
+        "I501",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "C8338",
+        "D630",
+        "E222",
+        "E785",
+        "F329",
+        "F419",
+        "I248",
+        "I2510",
+        "I252",
+        "I350",
+        "J810",
+        "N400",
+        "R2681",
+        "R5081",
+        "T451X5A",
+        "U071",
+        "Z7902",
+        "Z85820",
+        "Z9081",
+        "Z9181",
+        "Z955"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.125,
+      "f1": 0.19354838709677416,
+      "num_api_codes": 7,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 116,
+      "hadm_id": 23724428,
+      "num_provided_codes": 1,
+      "num_true_missing": 26,
+      "num_api_missing": 8,
+      "elapsed_time": 11.00748896598816,
+      "true_positives": [
+        "D589",
+        "E039",
+        "I2510",
+        "J449"
+      ],
+      "false_positives": [
+        "I5022",
+        "L89222",
+        "T22322A",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "E785",
+        "F17210",
+        "F319",
+        "G4733",
+        "I130",
+        "I252",
+        "I2720",
+        "I360",
+        "I4519",
+        "I4581",
+        "I5020",
+        "K219",
+        "L930",
+        "N189",
+        "T22352A",
+        "T310",
+        "X19XXXA",
+        "Y92092",
+        "Z7901",
+        "Z9114",
+        "Z952",
+        "Z955"
+      ],
+      "precision": 0.5,
+      "recall": 0.15384615384615385,
+      "f1": 0.23529411764705882,
+      "num_api_codes": 8,
+      "num_true_codes": 26
+    },
+    {
+      "idx": 118,
+      "hadm_id": 26849256,
+      "num_provided_codes": 3,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 5.842442035675049,
+      "true_positives": [],
+      "false_positives": [
+        "F17200",
+        "Z7689",
+        "Z79899"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 111,
+      "hadm_id": 29014086,
+      "num_provided_codes": 1,
+      "num_true_missing": 13,
+      "num_api_missing": 10,
+      "elapsed_time": 14.819868803024292,
+      "true_positives": [
+        "C9110",
+        "I10",
+        "N179"
+      ],
+      "false_positives": [
+        "E039",
+        "I340",
+        "R42",
+        "Z7409",
+        "Z7952",
+        "Z79899",
+        "Z9181"
+      ],
+      "false_negatives": [
+        "D688",
+        "E890",
+        "H814",
+        "I341",
+        "M7989",
+        "N939",
+        "Z20822",
+        "Z85828",
+        "Z85850",
+        "Z96649"
+      ],
+      "precision": 0.3,
+      "recall": 0.23076923076923078,
+      "f1": 0.2608695652173913,
+      "num_api_codes": 10,
+      "num_true_codes": 13
+    },
+    {
+      "idx": 112,
+      "hadm_id": 25907959,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 7,
+      "elapsed_time": 5.713645696640015,
+      "true_positives": [
+        "E119",
+        "E785",
+        "I5023",
+        "Z87891"
+      ],
+      "false_positives": [
+        "I10",
+        "R0602",
+        "R062"
+      ],
+      "false_negatives": [
+        "I110",
+        "R0902",
+        "Z7984"
+      ],
+      "precision": 0.5714285714285714,
+      "recall": 0.5714285714285714,
+      "f1": 0.5714285714285714,
+      "num_api_codes": 7,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 114,
+      "hadm_id": 24922893,
+      "num_provided_codes": 1,
+      "num_true_missing": 24,
+      "num_api_missing": 8,
+      "elapsed_time": 6.466360092163086,
+      "true_positives": [
+        "E1065",
+        "F17210",
+        "G92",
+        "I110",
+        "N179",
+        "Z23"
+      ],
+      "false_positives": [
+        "I5023",
+        "I6930"
+      ],
+      "false_negatives": [
+        "E1021",
+        "E10319",
+        "E785",
+        "E860",
+        "E861",
+        "F05",
+        "F329",
+        "I2510",
+        "I5021",
+        "I69334",
+        "I69398",
+        "K2080",
+        "K222",
+        "R200",
+        "Z20828",
+        "Z66",
+        "Z794",
+        "Z915"
+      ],
+      "precision": 0.75,
+      "recall": 0.25,
+      "f1": 0.375,
+      "num_api_codes": 8,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 117,
+      "hadm_id": 24403784,
+      "num_provided_codes": 18,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 5.047317981719971,
+      "true_positives": [],
+      "false_positives": [
+        "R112",
+        "R5381",
+        "R633",
+        "Z569"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 119,
+      "hadm_id": 21164608,
+      "num_provided_codes": 3,
+      "num_true_missing": 5,
+      "num_api_missing": 6,
+      "elapsed_time": 8.297101974487305,
+      "true_positives": [
+        "E46",
+        "F17210",
+        "J449"
+      ],
+      "false_positives": [
+        "M6281",
+        "Z23",
+        "Z720"
+      ],
+      "false_negatives": [
+        "I129",
+        "K115"
+      ],
+      "precision": 0.5,
+      "recall": 0.6,
+      "f1": 0.5454545454545454,
+      "num_api_codes": 6,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 120,
+      "hadm_id": 29632773,
+      "num_provided_codes": 1,
+      "num_true_missing": 4,
+      "num_api_missing": 7,
+      "elapsed_time": 5.456776142120361,
+      "true_positives": [
+        "E785",
+        "I10"
+      ],
+      "false_positives": [
+        "R262",
+        "Z23",
+        "Z433",
+        "Z7409",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "W108XXA",
+        "Y92008"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.5,
+      "f1": 0.36363636363636365,
+      "num_api_codes": 7,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 121,
+      "hadm_id": 23944428,
+      "num_provided_codes": 1,
+      "num_true_missing": 12,
+      "num_api_missing": 5,
+      "elapsed_time": 3.70068097114563,
+      "true_positives": [
+        "I712",
+        "N179"
+      ],
+      "false_positives": [
+        "I82401",
+        "I82402",
+        "Z23"
+      ],
+      "false_negatives": [
+        "D6859",
+        "I10",
+        "I4891",
+        "I513",
+        "I519",
+        "I82441",
+        "I82492",
+        "N280",
+        "Q211",
+        "R0902"
+      ],
+      "precision": 0.4,
+      "recall": 0.16666666666666666,
+      "f1": 0.23529411764705882,
+      "num_api_codes": 5,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 122,
+      "hadm_id": 28118708,
+      "num_provided_codes": 18,
+      "num_true_missing": 4,
+      "num_api_missing": 3,
+      "elapsed_time": 2.411717176437378,
+      "true_positives": [
+        "J9601"
+      ],
+      "false_positives": [
+        "E1165",
+        "R531"
+      ],
+      "false_negatives": [
+        "C787",
+        "E1122",
+        "E559"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.25,
+      "f1": 0.28571428571428575,
+      "num_api_codes": 3,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 123,
+      "hadm_id": 25497780,
+      "num_provided_codes": 8,
+      "num_true_missing": 3,
+      "num_api_missing": 4,
+      "elapsed_time": 6.029452800750732,
+      "true_positives": [
+        "R339"
+      ],
+      "false_positives": [
+        "D6861",
+        "I113",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "D689",
+        "I110"
+      ],
+      "precision": 0.25,
+      "recall": 0.3333333333333333,
+      "f1": 0.28571428571428575,
+      "num_api_codes": 4,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 124,
+      "hadm_id": 23349375,
+      "num_provided_codes": 1,
+      "num_true_missing": 23,
+      "num_api_missing": 8,
+      "elapsed_time": 6.415924072265625,
+      "true_positives": [
+        "E875",
+        "I2510",
+        "K861",
+        "N186",
+        "Z794",
+        "Z992"
+      ],
+      "false_positives": [
+        "E1022",
+        "I2519"
+      ],
+      "false_negatives": [
+        "D649",
+        "E1021",
+        "E10649",
+        "E669",
+        "E785",
+        "E8339",
+        "G4733",
+        "I120",
+        "I252",
+        "I25810",
+        "I2582",
+        "J449",
+        "K8689",
+        "M4318",
+        "Z6839",
+        "Z87891",
+        "Z951"
+      ],
+      "precision": 0.75,
+      "recall": 0.2608695652173913,
+      "f1": 0.3870967741935483,
+      "num_api_codes": 8,
+      "num_true_codes": 23
+    },
+    {
+      "idx": 125,
+      "hadm_id": 27923349,
+      "num_provided_codes": 1,
+      "num_true_missing": 15,
+      "num_api_missing": 11,
+      "elapsed_time": 5.728307008743286,
+      "true_positives": [
+        "E039",
+        "E119",
+        "I4891",
+        "I5022",
+        "J45909",
+        "M1990",
+        "N179",
+        "N183"
+      ],
+      "false_positives": [
+        "E162",
+        "E785",
+        "I129"
+      ],
+      "false_negatives": [
+        "D631",
+        "E6601",
+        "E7800",
+        "I130",
+        "I2510",
+        "K219",
+        "M109"
+      ],
+      "precision": 0.7272727272727273,
+      "recall": 0.5333333333333333,
+      "f1": 0.6153846153846153,
+      "num_api_codes": 11,
+      "num_true_codes": 15
+    },
+    {
+      "idx": 126,
+      "hadm_id": 27410410,
+      "num_provided_codes": 7,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 4.491495847702026,
+      "true_positives": [],
+      "false_positives": [
+        "D510",
+        "G8918",
+        "L97512",
+        "Z7901"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 127,
+      "hadm_id": 20460024,
+      "num_provided_codes": 19,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 3.679002046585083,
+      "true_positives": [],
+      "false_positives": [
+        "I952",
+        "R339",
+        "Z9113"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 128,
+      "hadm_id": 26872100,
+      "num_provided_codes": 1,
+      "num_true_missing": 15,
+      "num_api_missing": 6,
+      "elapsed_time": 3.697434186935425,
+      "true_positives": [
+        "Z7901"
+      ],
+      "false_positives": [
+        "A4150",
+        "D62",
+        "D696",
+        "R6520",
+        "Z452"
+      ],
+      "false_negatives": [
+        "B9620",
+        "C221",
+        "D649",
+        "D6959",
+        "G893",
+        "J309",
+        "K219",
+        "N400",
+        "R7881",
+        "R791",
+        "T85590A",
+        "Y838",
+        "Y929",
+        "Z86718"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.06666666666666667,
+      "f1": 0.09523809523809522,
+      "num_api_codes": 6,
+      "num_true_codes": 15
+    },
+    {
+      "idx": 129,
+      "hadm_id": 26695955,
+      "num_provided_codes": 7,
+      "num_true_missing": 12,
+      "num_api_missing": 6,
+      "elapsed_time": 14.172560691833496,
+      "true_positives": [
+        "G20",
+        "I5032"
+      ],
+      "false_positives": [
+        "F0390",
+        "I482",
+        "J9312",
+        "R2689"
+      ],
+      "false_negatives": [
+        "F0280",
+        "I4821",
+        "J95811",
+        "J984",
+        "K5900",
+        "M810",
+        "Y838",
+        "Y92230",
+        "Z20822",
+        "Z8673"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.16666666666666666,
+      "f1": 0.2222222222222222,
+      "num_api_codes": 6,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 130,
+      "hadm_id": 25218903,
+      "num_provided_codes": 1,
+      "num_true_missing": 20,
+      "num_api_missing": 10,
+      "elapsed_time": 7.718889951705933,
+      "true_positives": [
+        "E119",
+        "E785",
+        "G9340",
+        "I10",
+        "R319",
+        "R339"
+      ],
+      "false_positives": [
+        "F0781",
+        "J9600",
+        "R569",
+        "Z9542"
+      ],
+      "false_negatives": [
+        "B9629",
+        "D72829",
+        "G40909",
+        "G919",
+        "K5900",
+        "M436",
+        "R05",
+        "Y846",
+        "Y929",
+        "Z7401",
+        "Z8673",
+        "Z87891",
+        "Z931",
+        "Z982"
+      ],
+      "precision": 0.6,
+      "recall": 0.3,
+      "f1": 0.4,
+      "num_api_codes": 10,
+      "num_true_codes": 20
+    },
+    {
+      "idx": 131,
+      "hadm_id": 24511784,
+      "num_provided_codes": 1,
+      "num_true_missing": 15,
+      "num_api_missing": 8,
+      "elapsed_time": 15.010810136795044,
+      "true_positives": [
+        "E43",
+        "I110",
+        "I480",
+        "I5022",
+        "J440",
+        "J9600"
+      ],
+      "false_positives": [
+        "E6609",
+        "F10231"
+      ],
+      "false_negatives": [
+        "B1920",
+        "F10239",
+        "F602",
+        "G8929",
+        "J90",
+        "R918",
+        "Z66",
+        "Z681",
+        "Z720"
+      ],
+      "precision": 0.75,
+      "recall": 0.4,
+      "f1": 0.5217391304347827,
+      "num_api_codes": 8,
+      "num_true_codes": 15
+    },
+    {
+      "idx": 132,
+      "hadm_id": 23608239,
+      "num_provided_codes": 2,
+      "num_true_missing": 9,
+      "num_api_missing": 10,
+      "elapsed_time": 6.711199998855591,
+      "true_positives": [
+        "D509",
+        "E11319",
+        "E1165",
+        "E669",
+        "E785",
+        "I10",
+        "Z794",
+        "Z7984"
+      ],
+      "false_positives": [
+        "Z7901",
+        "Z98890"
+      ],
+      "false_negatives": [
+        "Z6826"
+      ],
+      "precision": 0.8,
+      "recall": 0.8888888888888888,
+      "f1": 0.8421052631578948,
+      "num_api_codes": 10,
+      "num_true_codes": 9
+    },
+    {
+      "idx": 133,
+      "hadm_id": 28055067,
+      "num_provided_codes": 1,
+      "num_true_missing": 19,
+      "num_api_missing": 8,
+      "elapsed_time": 13.25238299369812,
+      "true_positives": [
+        "E1165",
+        "I471",
+        "I5033",
+        "N179",
+        "Z794"
+      ],
+      "false_positives": [
+        "I480",
+        "R296",
+        "Z681"
+      ],
+      "false_negatives": [
+        "D649",
+        "E1122",
+        "E785",
+        "E875",
+        "I252",
+        "I2720",
+        "I4891",
+        "M1A9XX1",
+        "M353",
+        "N189",
+        "N400",
+        "Z23",
+        "Z66",
+        "Z7902"
+      ],
+      "precision": 0.625,
+      "recall": 0.2631578947368421,
+      "f1": 0.37037037037037035,
+      "num_api_codes": 8,
+      "num_true_codes": 19
+    },
+    {
+      "idx": 134,
+      "hadm_id": 24648649,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 8,
+      "elapsed_time": 4.305583715438843,
+      "true_positives": [
+        "F419",
+        "R45851",
+        "Z87891"
+      ],
+      "false_positives": [
+        "F1010",
+        "F1210",
+        "Z23",
+        "Z8500",
+        "Z9151"
+      ],
+      "false_negatives": [
+        "F10980",
+        "F12980",
+        "Z8589",
+        "Z915"
+      ],
+      "precision": 0.375,
+      "recall": 0.42857142857142855,
+      "f1": 0.39999999999999997,
+      "num_api_codes": 8,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 135,
+      "hadm_id": 24515644,
+      "num_provided_codes": 18,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 5.002737045288086,
+      "true_positives": [],
+      "false_positives": [
+        "F0280",
+        "F1099",
+        "R296",
+        "R531",
+        "R634"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 136,
+      "hadm_id": 27619076,
+      "num_provided_codes": 3,
+      "num_true_missing": 7,
+      "num_api_missing": 7,
+      "elapsed_time": 8.771784782409668,
+      "true_positives": [
+        "I10"
+      ],
+      "false_positives": [
+        "F17210",
+        "G450",
+        "G8190",
+        "I635",
+        "I639",
+        "I679"
+      ],
+      "false_negatives": [
+        "E785",
+        "G453",
+        "Q211",
+        "R4701",
+        "R531",
+        "Z8673"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.14285714285714285,
+      "f1": 0.14285714285714285,
+      "num_api_codes": 7,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 137,
+      "hadm_id": 28106974,
+      "num_provided_codes": 2,
+      "num_true_missing": 19,
+      "num_api_missing": 8,
+      "elapsed_time": 7.564772844314575,
+      "true_positives": [
+        "A0472",
+        "E43",
+        "I10",
+        "U071",
+        "Z66"
+      ],
+      "false_positives": [
+        "E119",
+        "E878",
+        "N19"
+      ],
+      "false_negatives": [
+        "B961",
+        "E1165",
+        "E8339",
+        "E8342",
+        "F32A",
+        "N12",
+        "N820",
+        "N823",
+        "T8384XA",
+        "Y731",
+        "Z681",
+        "Z8505",
+        "Z8541",
+        "Z923"
+      ],
+      "precision": 0.625,
+      "recall": 0.2631578947368421,
+      "f1": 0.37037037037037035,
+      "num_api_codes": 8,
+      "num_true_codes": 19
+    },
+    {
+      "idx": 138,
+      "hadm_id": 25366781,
+      "num_provided_codes": 1,
+      "num_true_missing": 3,
+      "num_api_missing": 5,
+      "elapsed_time": 3.0838701725006104,
+      "true_positives": [
+        "E119",
+        "J45909"
+      ],
+      "false_positives": [
+        "M2106",
+        "Z23",
+        "Z794"
+      ],
+      "false_negatives": [
+        "M21062"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "f1": 0.5,
+      "num_api_codes": 5,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 139,
+      "hadm_id": 21812341,
+      "num_provided_codes": 21,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 5.182235240936279,
+      "true_positives": [],
+      "false_positives": [
+        "G4730",
+        "R0602",
+        "R609",
+        "Z9181"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 140,
+      "hadm_id": 27839670,
+      "num_provided_codes": 5,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 4.212294340133667,
+      "true_positives": [],
+      "false_positives": [
+        "N390",
+        "R070",
+        "R201",
+        "R509"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 141,
+      "hadm_id": 23964771,
+      "num_provided_codes": 23,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 3.436685800552368,
+      "true_positives": [],
+      "false_positives": [
+        "D703",
+        "R53",
+        "Z4901"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 142,
+      "hadm_id": 27886914,
+      "num_provided_codes": 1,
+      "num_true_missing": 20,
+      "num_api_missing": 8,
+      "elapsed_time": 6.504260063171387,
+      "true_positives": [
+        "D62",
+        "E875",
+        "I4891",
+        "I5022",
+        "I739",
+        "K863"
+      ],
+      "false_positives": [
+        "I724",
+        "Z5189"
+      ],
+      "false_negatives": [
+        "D136",
+        "E785",
+        "I110",
+        "I2510",
+        "I722",
+        "I728",
+        "K219",
+        "N2889",
+        "T45525A",
+        "Y929",
+        "Z7901",
+        "Z7902",
+        "Z87891",
+        "Z95820"
+      ],
+      "precision": 0.75,
+      "recall": 0.3,
+      "f1": 0.4285714285714285,
+      "num_api_codes": 8,
+      "num_true_codes": 20
+    },
+    {
+      "idx": 143,
+      "hadm_id": 29962126,
+      "num_provided_codes": 1,
+      "num_true_missing": 6,
+      "num_api_missing": 5,
+      "elapsed_time": 4.72889518737793,
+      "true_positives": [
+        "D638",
+        "E43",
+        "R791"
+      ],
+      "false_positives": [
+        "M07661",
+        "Z720"
+      ],
+      "false_negatives": [
+        "M07671",
+        "Z6825",
+        "Z87891"
+      ],
+      "precision": 0.6,
+      "recall": 0.5,
+      "f1": 0.5454545454545454,
+      "num_api_codes": 5,
+      "num_true_codes": 6
+    },
+    {
+      "idx": 144,
+      "hadm_id": 22058345,
+      "num_provided_codes": 1,
+      "num_true_missing": 13,
+      "num_api_missing": 8,
+      "elapsed_time": 10.696471929550171,
+      "true_positives": [
+        "A4101",
+        "E871",
+        "I38",
+        "N390"
+      ],
+      "false_positives": [
+        "R7881",
+        "Z4682",
+        "Z792",
+        "Z954"
+      ],
+      "false_negatives": [
+        "E119",
+        "E785",
+        "G4733",
+        "I129",
+        "K219",
+        "N183",
+        "N400",
+        "R21",
+        "Z96653"
+      ],
+      "precision": 0.5,
+      "recall": 0.3076923076923077,
+      "f1": 0.380952380952381,
+      "num_api_codes": 8,
+      "num_true_codes": 13
+    },
+    {
+      "idx": 145,
+      "hadm_id": 28064341,
+      "num_provided_codes": 8,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 2.4303109645843506,
+      "true_positives": [],
+      "false_positives": [
+        "Z23",
+        "Z539"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 146,
+      "hadm_id": 25210937,
+      "num_provided_codes": 2,
+      "num_true_missing": 13,
+      "num_api_missing": 6,
+      "elapsed_time": 6.503653049468994,
+      "true_positives": [
+        "E039"
+      ],
+      "false_positives": [
+        "F531",
+        "O99213",
+        "R509",
+        "T814XXA",
+        "Z392"
+      ],
+      "false_negatives": [
+        "E109",
+        "F329",
+        "F419",
+        "J329",
+        "N858",
+        "O134",
+        "O34211",
+        "O99284",
+        "O99344",
+        "Z370",
+        "Z3A37",
+        "Z794"
+      ],
+      "precision": 0.16666666666666666,
+      "recall": 0.07692307692307693,
+      "f1": 0.10526315789473684,
+      "num_api_codes": 6,
+      "num_true_codes": 13
+    },
+    {
+      "idx": 147,
+      "hadm_id": 26479276,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 4,
+      "elapsed_time": 6.958254098892212,
+      "true_positives": [
+        "D649"
+      ],
+      "false_positives": [
+        "E1065",
+        "E162",
+        "K2950"
+      ],
+      "false_negatives": [
+        "E119",
+        "I10",
+        "K2970",
+        "R7989",
+        "T465X5A",
+        "Y92009"
+      ],
+      "precision": 0.25,
+      "recall": 0.14285714285714285,
+      "f1": 0.18181818181818182,
+      "num_api_codes": 4,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 148,
+      "hadm_id": 24444590,
+      "num_provided_codes": 3,
+      "num_true_missing": 2,
+      "num_api_missing": 4,
+      "elapsed_time": 3.123317003250122,
+      "true_positives": [
+        "O701"
+      ],
+      "false_positives": [
+        "O6959X0",
+        "Z23",
+        "Z390"
+      ],
+      "false_negatives": [
+        "O6989X0"
+      ],
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333,
+      "num_api_codes": 4,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 149,
+      "hadm_id": 28578257,
+      "num_provided_codes": 1,
+      "num_true_missing": 24,
+      "num_api_missing": 5,
+      "elapsed_time": 4.307883024215698,
+      "true_positives": [
+        "N179"
+      ],
+      "false_positives": [
+        "A493",
+        "D89810",
+        "I801",
+        "Z95818"
+      ],
+      "false_negatives": [
+        "B957",
+        "C9201",
+        "D696",
+        "D89813",
+        "E785",
+        "E872",
+        "G4700",
+        "I10",
+        "I82C21",
+        "K219",
+        "K449",
+        "K5900",
+        "K648",
+        "K7581",
+        "R110",
+        "R197",
+        "R509",
+        "R739",
+        "R7881",
+        "T380X5A",
+        "Z1159",
+        "Z7901",
+        "Z87891"
+      ],
+      "precision": 0.2,
+      "recall": 0.041666666666666664,
+      "f1": 0.06896551724137931,
+      "num_api_codes": 5,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 150,
+      "hadm_id": 24386563,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.315371036529541,
+      "true_positives": [],
+      "false_positives": [
+        "F322",
+        "Z430",
+        "Z721"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 151,
+      "hadm_id": 23812786,
+      "num_provided_codes": 4,
+      "num_true_missing": 2,
+      "num_api_missing": 2,
+      "elapsed_time": 1.231975793838501,
+      "true_positives": [],
+      "false_positives": [
+        "F10239",
+        "Z515"
+      ],
+      "false_negatives": [
+        "W109XXA",
+        "Y92008"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 152,
+      "hadm_id": 26818978,
+      "num_provided_codes": 1,
+      "num_true_missing": 4,
+      "num_api_missing": 3,
+      "elapsed_time": 2.461725950241089,
+      "true_positives": [
+        "Z370"
+      ],
+      "false_positives": [
+        "O1003",
+        "O724"
+      ],
+      "false_negatives": [
+        "O1092",
+        "O411230",
+        "Z3A40"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.25,
+      "f1": 0.28571428571428575,
+      "num_api_codes": 3,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 153,
+      "hadm_id": 29894331,
+      "num_provided_codes": 1,
+      "num_true_missing": 13,
+      "num_api_missing": 6,
+      "elapsed_time": 3.6181178092956543,
+      "true_positives": [
+        "D61818",
+        "N179",
+        "Z940",
+        "Z944"
+      ],
+      "false_positives": [
+        "K529",
+        "Z992"
+      ],
+      "false_negatives": [
+        "A0839",
+        "K219",
+        "K7030",
+        "K767",
+        "R000",
+        "R0600",
+        "R197",
+        "T8612",
+        "Z7289"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.3076923076923077,
+      "f1": 0.42105263157894735,
+      "num_api_codes": 6,
+      "num_true_codes": 13
+    },
+    {
+      "idx": 154,
+      "hadm_id": 23908704,
+      "num_provided_codes": 7,
+      "num_true_missing": 5,
+      "num_api_missing": 4,
+      "elapsed_time": 3.497891902923584,
+      "true_positives": [
+        "E1122",
+        "E785",
+        "I447",
+        "N189"
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        "Z8673"
+      ],
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.888888888888889,
+      "num_api_codes": 4,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 155,
+      "hadm_id": 27218059,
+      "num_provided_codes": 1,
+      "num_true_missing": 18,
+      "num_api_missing": 10,
+      "elapsed_time": 11.080094814300537,
+      "true_positives": [
+        "D62",
+        "F419",
+        "I110",
+        "J449",
+        "N179"
+      ],
+      "false_positives": [
+        "E669",
+        "F329",
+        "I5032",
+        "Z6843",
+        "Z952"
+      ],
+      "false_negatives": [
+        "D696",
+        "E039",
+        "E6601",
+        "E785",
+        "E872",
+        "F17210",
+        "I5033",
+        "J9811",
+        "K219",
+        "M109",
+        "Z20822",
+        "Z6837",
+        "Z8673"
+      ],
+      "precision": 0.5,
+      "recall": 0.2777777777777778,
+      "f1": 0.35714285714285715,
+      "num_api_codes": 10,
+      "num_true_codes": 18
+    },
+    {
+      "idx": 156,
+      "hadm_id": 28883548,
+      "num_provided_codes": 13,
+      "num_true_missing": 1,
+      "num_api_missing": 4,
+      "elapsed_time": 3.2467739582061768,
+      "true_positives": [],
+      "false_positives": [
+        "E2101",
+        "R2689",
+        "W19",
+        "Z5189"
+      ],
+      "false_negatives": [
+        "E222"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 1
+    },
+    {
+      "idx": 157,
+      "hadm_id": 27965965,
+      "num_provided_codes": 1,
+      "num_true_missing": 10,
+      "num_api_missing": 10,
+      "elapsed_time": 12.10339093208313,
+      "true_positives": [
+        "C787",
+        "D509",
+        "F329",
+        "I10",
+        "M170",
+        "Z87891"
+      ],
+      "false_positives": [
+        "G9341",
+        "N179",
+        "Z7901",
+        "Z955"
+      ],
+      "false_negatives": [
+        "R410",
+        "T4275XA",
+        "Y92234",
+        "Z96641"
+      ],
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1": 0.6,
+      "num_api_codes": 10,
+      "num_true_codes": 10
+    },
+    {
+      "idx": 158,
+      "hadm_id": 20135684,
+      "num_provided_codes": 3,
+      "num_true_missing": 2,
+      "num_api_missing": 5,
+      "elapsed_time": 6.538218021392822,
+      "true_positives": [],
+      "false_positives": [
+        "H4712",
+        "R510",
+        "Z7901",
+        "Z79891",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "H4711",
+        "K219"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 159,
+      "hadm_id": 26921533,
+      "num_provided_codes": 1,
+      "num_true_missing": 11,
+      "num_api_missing": 9,
+      "elapsed_time": 6.220174789428711,
+      "true_positives": [
+        "G500",
+        "N179",
+        "N390"
+      ],
+      "false_positives": [
+        "E119",
+        "E780",
+        "I10",
+        "I639",
+        "J189",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "B9620",
+        "E1122",
+        "E785",
+        "I129",
+        "I69320",
+        "N189",
+        "R32",
+        "Z794"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.2727272727272727,
+      "f1": 0.3,
+      "num_api_codes": 9,
+      "num_true_codes": 11
+    },
+    {
+      "idx": 166,
+      "hadm_id": 27723600,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 5,
+      "elapsed_time": 5.087222099304199,
+      "true_positives": [
+        "F17210",
+        "R55"
+      ],
+      "false_positives": [
+        "F339",
+        "G40909",
+        "I82409"
+      ],
+      "false_negatives": [
+        "F329",
+        "R569",
+        "W1830XA",
+        "Y92099",
+        "Z87898"
+      ],
+      "precision": 0.4,
+      "recall": 0.2857142857142857,
+      "f1": 0.3333333333333333,
+      "num_api_codes": 5,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 167,
+      "hadm_id": 24713257,
+      "num_provided_codes": 1,
+      "num_true_missing": 4,
+      "num_api_missing": 6,
+      "elapsed_time": 4.545705080032349,
+      "true_positives": [],
+      "false_positives": [
+        "F902",
+        "G2409",
+        "G43D0",
+        "I69311",
+        "J09X2",
+        "Z20828"
+      ],
+      "false_negatives": [
+        "A6920",
+        "F419",
+        "F909",
+        "I69319"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 6,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 160,
+      "hadm_id": 21263143,
+      "num_provided_codes": 1,
+      "num_true_missing": 17,
+      "num_api_missing": 10,
+      "elapsed_time": 5.767031908035278,
+      "true_positives": [
+        "E1122",
+        "E780",
+        "E872",
+        "I313",
+        "M109",
+        "N179",
+        "N189",
+        "T8611"
+      ],
+      "false_positives": [
+        "I10",
+        "K7460"
+      ],
+      "false_negatives": [
+        "E11319",
+        "E860",
+        "I129",
+        "I350",
+        "K2970",
+        "K760",
+        "N529",
+        "Y830",
+        "Y9289"
+      ],
+      "precision": 0.8,
+      "recall": 0.47058823529411764,
+      "f1": 0.5925925925925927,
+      "num_api_codes": 10,
+      "num_true_codes": 17
+    },
+    {
+      "idx": 161,
+      "hadm_id": 29769056,
+      "num_provided_codes": 1,
+      "num_true_missing": 3,
+      "num_api_missing": 8,
+      "elapsed_time": 5.236541032791138,
+      "true_positives": [
+        "D252",
+        "J45909",
+        "K219"
+      ],
+      "false_positives": [
+        "E876",
+        "N938",
+        "R062",
+        "Z23",
+        "Z79891"
+      ],
+      "false_negatives": [],
+      "precision": 0.375,
+      "recall": 1.0,
+      "f1": 0.5454545454545454,
+      "num_api_codes": 8,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 162,
+      "hadm_id": 22602515,
+      "num_provided_codes": 18,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.701322078704834,
+      "true_positives": [],
+      "false_positives": [
+        "R55",
+        "Z515",
+        "Z742"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 163,
+      "hadm_id": 27478457,
+      "num_provided_codes": 8,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.725399971008301,
+      "true_positives": [],
+      "false_positives": [
+        "F17120",
+        "F331",
+        "Z392"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 164,
+      "hadm_id": 23137192,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 1.8176288604736328,
+      "true_positives": [],
+      "false_positives": [
+        "E8889",
+        "F1520"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 165,
+      "hadm_id": 29758724,
+      "num_provided_codes": 1,
+      "num_true_missing": 6,
+      "num_api_missing": 5,
+      "elapsed_time": 4.640410900115967,
+      "true_positives": [
+        "F4323"
+      ],
+      "false_positives": [
+        "Z720",
+        "Z7901",
+        "Z7982",
+        "Z993"
+      ],
+      "false_negatives": [
+        "K635",
+        "M1990",
+        "Z20822",
+        "Z87891",
+        "Z96651"
+      ],
+      "precision": 0.2,
+      "recall": 0.16666666666666666,
+      "f1": 0.1818181818181818,
+      "num_api_codes": 5,
+      "num_true_codes": 6
+    },
+    {
+      "idx": 168,
+      "hadm_id": 23688894,
+      "num_provided_codes": 1,
+      "num_true_missing": 11,
+      "num_api_missing": 9,
+      "elapsed_time": 6.73740291595459,
+      "true_positives": [
+        "G4733",
+        "I10",
+        "J45909",
+        "K219",
+        "M75102",
+        "R011"
+      ],
+      "false_positives": [
+        "E6601",
+        "E785",
+        "F068"
+      ],
+      "false_negatives": [
+        "E669",
+        "G3184",
+        "M65812",
+        "Z6841",
+        "Z96653"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.5454545454545454,
+      "f1": 0.6,
+      "num_api_codes": 9,
+      "num_true_codes": 11
+    },
+    {
+      "idx": 169,
+      "hadm_id": 25087349,
+      "num_provided_codes": 9,
+      "num_true_missing": 1,
+      "num_api_missing": 2,
+      "elapsed_time": 1.8374989032745361,
+      "true_positives": [],
+      "false_positives": [
+        "N179",
+        "Z7982"
+      ],
+      "false_negatives": [
+        "Z8549"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 1
+    },
+    {
+      "idx": 170,
+      "hadm_id": 28438449,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 5,
+      "elapsed_time": 4.790228843688965,
+      "true_positives": [
+        "E871",
+        "R740"
+      ],
+      "false_positives": [
+        "F17210",
+        "R3121",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "G43909",
+        "K589",
+        "R3129",
+        "R809",
+        "Z87891"
+      ],
+      "precision": 0.4,
+      "recall": 0.2857142857142857,
+      "f1": 0.3333333333333333,
+      "num_api_codes": 5,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 171,
+      "hadm_id": 29392855,
+      "num_provided_codes": 1,
+      "num_true_missing": 3,
+      "num_api_missing": 2,
+      "elapsed_time": 1.5452299118041992,
+      "true_positives": [
+        "O701",
+        "Z370"
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        "Z3A39"
+      ],
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "num_api_codes": 2,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 172,
+      "hadm_id": 21894284,
+      "num_provided_codes": 17,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 2.9323642253875732,
+      "true_positives": [],
+      "false_positives": [
+        "E860",
+        "R0602",
+        "R509"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 173,
+      "hadm_id": 20685479,
+      "num_provided_codes": 4,
+      "num_true_missing": 4,
+      "num_api_missing": 5,
+      "elapsed_time": 3.779165744781494,
+      "true_positives": [
+        "I480",
+        "Z7952"
+      ],
+      "false_positives": [
+        "D482",
+        "G8440",
+        "R3915"
+      ],
+      "false_negatives": [
+        "C479",
+        "G8929"
+      ],
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444445,
+      "num_api_codes": 5,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 174,
+      "hadm_id": 27788769,
+      "num_provided_codes": 4,
+      "num_true_missing": 19,
+      "num_api_missing": 6,
+      "elapsed_time": 6.47014594078064,
+      "true_positives": [
+        "G9341",
+        "I5022",
+        "N179"
+      ],
+      "false_positives": [
+        "F05",
+        "R413",
+        "Z7401"
+      ],
+      "false_negatives": [
+        "D125",
+        "F17210",
+        "F419",
+        "G8929",
+        "I2510",
+        "K5730",
+        "K635",
+        "K648",
+        "N141",
+        "R0789",
+        "R1084",
+        "R7402",
+        "T45515A",
+        "Y92238",
+        "Z7901",
+        "Z952"
+      ],
+      "precision": 0.5,
+      "recall": 0.15789473684210525,
+      "f1": 0.23999999999999996,
+      "num_api_codes": 6,
+      "num_true_codes": 19
+    },
+    {
+      "idx": 175,
+      "hadm_id": 20693549,
+      "num_provided_codes": 1,
+      "num_true_missing": 16,
+      "num_api_missing": 9,
+      "elapsed_time": 6.3760340213775635,
+      "true_positives": [
+        "B9620",
+        "D509",
+        "E669",
+        "E785",
+        "I10",
+        "N390"
+      ],
+      "false_positives": [
+        "K5730",
+        "K625",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "K5731",
+        "K635",
+        "K644",
+        "M109",
+        "M1990",
+        "Z1611",
+        "Z20828",
+        "Z6833",
+        "Z87891",
+        "Z96651"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.375,
+      "f1": 0.4800000000000001,
+      "num_api_codes": 9,
+      "num_true_codes": 16
+    },
+    {
+      "idx": 176,
+      "hadm_id": 23602397,
+      "num_provided_codes": 14,
+      "num_true_missing": 11,
+      "num_api_missing": 4,
+      "elapsed_time": 2.79669189453125,
+      "true_positives": [
+        "I81",
+        "N179"
+      ],
+      "false_positives": [
+        "R6520",
+        "Y832"
+      ],
+      "false_negatives": [
+        "D649",
+        "E039",
+        "E139",
+        "E872",
+        "I82890",
+        "K8020",
+        "R000",
+        "Z6841",
+        "Z794"
+      ],
+      "precision": 0.5,
+      "recall": 0.18181818181818182,
+      "f1": 0.26666666666666666,
+      "num_api_codes": 4,
+      "num_true_codes": 11
+    },
+    {
+      "idx": 177,
+      "hadm_id": 27862910,
+      "num_provided_codes": 10,
+      "num_true_missing": 1,
+      "num_api_missing": 2,
+      "elapsed_time": 3.5526230335235596,
+      "true_positives": [],
+      "false_positives": [
+        "F332",
+        "Z7441"
+      ],
+      "false_negatives": [
+        "E785"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 1
+    },
+    {
+      "idx": 178,
+      "hadm_id": 21500696,
+      "num_provided_codes": 2,
+      "num_true_missing": 5,
+      "num_api_missing": 5,
+      "elapsed_time": 17.03979206085205,
+      "true_positives": [
+        "D62",
+        "D696",
+        "I8500",
+        "K769"
+      ],
+      "false_positives": [
+        "Z23"
+      ],
+      "false_negatives": [
+        "Z85831"
+      ],
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8000000000000002,
+      "num_api_codes": 5,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 179,
+      "hadm_id": 27124577,
+      "num_provided_codes": 3,
+      "num_true_missing": 7,
+      "num_api_missing": 5,
+      "elapsed_time": 7.137922048568726,
+      "true_positives": [
+        "I10",
+        "R42"
+      ],
+      "false_positives": [
+        "C7931",
+        "E1165",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "C7801",
+        "C7802",
+        "R29700",
+        "Z7902",
+        "Z8589"
+      ],
+      "precision": 0.4,
+      "recall": 0.2857142857142857,
+      "f1": 0.3333333333333333,
+      "num_api_codes": 5,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 180,
+      "hadm_id": 24215684,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 7,
+      "elapsed_time": 3.616011142730713,
+      "true_positives": [
+        "F1010",
+        "M170"
+      ],
+      "false_positives": [
+        "F17200",
+        "F339",
+        "I8291",
+        "K8090",
+        "K868"
+      ],
+      "false_negatives": [
+        "F329",
+        "K219",
+        "K660",
+        "K8045",
+        "Z87891"
+      ],
+      "precision": 0.2857142857142857,
+      "recall": 0.2857142857142857,
+      "f1": 0.2857142857142857,
+      "num_api_codes": 7,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 181,
+      "hadm_id": 24317978,
+      "num_provided_codes": 7,
+      "num_true_missing": 4,
+      "num_api_missing": 6,
+      "elapsed_time": 6.736547946929932,
+      "true_positives": [
+        "I120",
+        "Z8546"
+      ],
+      "false_positives": [
+        "B99",
+        "N185",
+        "R509",
+        "Z792"
+      ],
+      "false_negatives": [
+        "Z86718",
+        "Z923"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "num_api_codes": 6,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 182,
+      "hadm_id": 25997958,
+      "num_provided_codes": 1,
+      "num_true_missing": 5,
+      "num_api_missing": 7,
+      "elapsed_time": 6.337096929550171,
+      "true_positives": [
+        "G4733"
+      ],
+      "false_positives": [
+        "F17210",
+        "Z23",
+        "Z7952",
+        "Z79891",
+        "Z9189",
+        "Z9221"
+      ],
+      "false_negatives": [
+        "R1011",
+        "Y839",
+        "Y92009",
+        "Z87891"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 0.2,
+      "f1": 0.16666666666666666,
+      "num_api_codes": 7,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 183,
+      "hadm_id": 26096633,
+      "num_provided_codes": 5,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 2.0967600345611572,
+      "true_positives": [],
+      "false_positives": [
+        "Z515",
+        "Z7901"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 184,
+      "hadm_id": 22349177,
+      "num_provided_codes": 1,
+      "num_true_missing": 16,
+      "num_api_missing": 9,
+      "elapsed_time": 8.05400800704956,
+      "true_positives": [
+        "E039",
+        "E1165",
+        "G4733",
+        "I10",
+        "L03116",
+        "R188",
+        "Z794"
+      ],
+      "false_positives": [
+        "K769",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "E780",
+        "E785",
+        "J45909",
+        "K219",
+        "K7460",
+        "L97509",
+        "L97529",
+        "Z7982",
+        "Z87891"
+      ],
+      "precision": 0.7777777777777778,
+      "recall": 0.4375,
+      "f1": 0.56,
+      "num_api_codes": 9,
+      "num_true_codes": 16
+    },
+    {
+      "idx": 185,
+      "hadm_id": 22655087,
+      "num_provided_codes": 12,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 4.810250997543335,
+      "true_positives": [],
+      "false_positives": [
+        "I950",
+        "R2689",
+        "Y907",
+        "Z2331"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 186,
+      "hadm_id": 25564623,
+      "num_provided_codes": 1,
+      "num_true_missing": 16,
+      "num_api_missing": 7,
+      "elapsed_time": 4.942751884460449,
+      "true_positives": [
+        "D61818",
+        "F329",
+        "I10",
+        "J90",
+        "K7031"
+      ],
+      "false_positives": [
+        "E119",
+        "R609"
+      ],
+      "false_negatives": [
+        "E669",
+        "E8779",
+        "K2270",
+        "K529",
+        "K7290",
+        "Y838",
+        "Y92234",
+        "Z7721",
+        "Z85118",
+        "Z87891",
+        "Z923"
+      ],
+      "precision": 0.7142857142857143,
+      "recall": 0.3125,
+      "f1": 0.43478260869565216,
+      "num_api_codes": 7,
+      "num_true_codes": 16
+    },
+    {
+      "idx": 187,
+      "hadm_id": 23560619,
+      "num_provided_codes": 1,
+      "num_true_missing": 19,
+      "num_api_missing": 6,
+      "elapsed_time": 3.713054895401001,
+      "true_positives": [
+        "E669",
+        "G4733",
+        "Z87891"
+      ],
+      "false_positives": [
+        "D696",
+        "K851",
+        "R091"
+      ],
+      "false_negatives": [
+        "D6959",
+        "E8339",
+        "J90",
+        "J9811",
+        "K219",
+        "K5900",
+        "K760",
+        "K8510",
+        "K9189",
+        "R030",
+        "R0902",
+        "R1011",
+        "R197",
+        "Y839",
+        "Y92009",
+        "Z6836"
+      ],
+      "precision": 0.5,
+      "recall": 0.15789473684210525,
+      "f1": 0.23999999999999996,
+      "num_api_codes": 6,
+      "num_true_codes": 19
+    },
+    {
+      "idx": 188,
+      "hadm_id": 26960224,
+      "num_provided_codes": 10,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 5.110407829284668,
+      "true_positives": [],
+      "false_positives": [
+        "R0789",
+        "R410",
+        "R509",
+        "Z741"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 189,
+      "hadm_id": 22961529,
+      "num_provided_codes": 1,
+      "num_true_missing": 21,
+      "num_api_missing": 9,
+      "elapsed_time": 7.7404608726501465,
+      "true_positives": [
+        "C3411",
+        "I959",
+        "J441"
+      ],
+      "false_positives": [
+        "I5032",
+        "J189",
+        "J90",
+        "N189",
+        "R1310",
+        "Z4889"
+      ],
+      "false_negatives": [
+        "E119",
+        "E785",
+        "F329",
+        "I110",
+        "I2510",
+        "I4891",
+        "I5033",
+        "J188",
+        "J918",
+        "J9601",
+        "J9811",
+        "N179",
+        "N433",
+        "R578",
+        "Z23",
+        "Z7902",
+        "Z794",
+        "Z87891"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.14285714285714285,
+      "f1": 0.2,
+      "num_api_codes": 9,
+      "num_true_codes": 21
+    },
+    {
+      "idx": 190,
+      "hadm_id": 20230126,
+      "num_provided_codes": 1,
+      "num_true_missing": 12,
+      "num_api_missing": 5,
+      "elapsed_time": 3.631337881088257,
+      "true_positives": [
+        "Z7901"
+      ],
+      "false_positives": [
+        "G4731",
+        "R5383",
+        "Z681",
+        "Z974"
+      ],
+      "false_negatives": [
+        "C221",
+        "E785",
+        "I4821",
+        "I4892",
+        "I9581",
+        "K8063",
+        "R791",
+        "Y838",
+        "Y92230",
+        "Z20822",
+        "Z23"
+      ],
+      "precision": 0.2,
+      "recall": 0.08333333333333333,
+      "f1": 0.11764705882352941,
+      "num_api_codes": 5,
+      "num_true_codes": 12
+    },
+    {
+      "idx": 191,
+      "hadm_id": 22469623,
+      "num_provided_codes": 18,
+      "num_true_missing": 6,
+      "num_api_missing": 5,
+      "elapsed_time": 8.674307823181152,
+      "true_positives": [],
+      "false_positives": [
+        "F05",
+        "K7460",
+        "R531",
+        "Z7409",
+        "Z794"
+      ],
+      "false_negatives": [
+        "B1920",
+        "B961",
+        "G8929",
+        "K219",
+        "R188",
+        "R51"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 6
+    },
+    {
+      "idx": 192,
+      "hadm_id": 20545804,
+      "num_provided_codes": 9,
+      "num_true_missing": 2,
+      "num_api_missing": 5,
+      "elapsed_time": 3.1928858757019043,
+      "true_positives": [
+        "Z7901"
+      ],
+      "false_positives": [
+        "D72829",
+        "I82612",
+        "R5381",
+        "T45515A"
+      ],
+      "false_negatives": [
+        "I82622"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.28571428571428575,
+      "num_api_codes": 5,
+      "num_true_codes": 2
+    },
+    {
+      "idx": 193,
+      "hadm_id": 20183435,
+      "num_provided_codes": 10,
+      "num_true_missing": 7,
+      "num_api_missing": 3,
+      "elapsed_time": 3.4565911293029785,
+      "true_positives": [
+        "I4891",
+        "Z23"
+      ],
+      "false_positives": [
+        "T812XXA"
+      ],
+      "false_negatives": [
+        "E079",
+        "E785",
+        "I10",
+        "I9789",
+        "M797"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 0.2857142857142857,
+      "f1": 0.4,
+      "num_api_codes": 3,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 194,
+      "hadm_id": 28662253,
+      "num_provided_codes": 8,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 3.9693031311035156,
+      "true_positives": [],
+      "false_positives": [
+        "F332",
+        "R261",
+        "Z7901"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 195,
+      "hadm_id": 21849443,
+      "num_provided_codes": 1,
+      "num_true_missing": 3,
+      "num_api_missing": 3,
+      "elapsed_time": 2.7329580783843994,
+      "true_positives": [],
+      "false_positives": [
+        "Z636",
+        "Z7901",
+        "Z79899"
+      ],
+      "false_negatives": [
+        "B948",
+        "F1121",
+        "J45909"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 196,
+      "hadm_id": 21540673,
+      "num_provided_codes": 13,
+      "num_true_missing": 7,
+      "num_api_missing": 5,
+      "elapsed_time": 6.05104398727417,
+      "true_positives": [],
+      "false_positives": [
+        "D6372",
+        "G8918",
+        "T84590A",
+        "Z45010",
+        "Z4821"
+      ],
+      "false_negatives": [
+        "E785",
+        "K219",
+        "R740",
+        "Z20828",
+        "Z794",
+        "Z7982",
+        "Z955"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 197,
+      "hadm_id": 20392805,
+      "num_provided_codes": 1,
+      "num_true_missing": 14,
+      "num_api_missing": 7,
+      "elapsed_time": 7.680555105209351,
+      "true_positives": [
+        "E785",
+        "G629",
+        "I130",
+        "M109",
+        "N184",
+        "Z23"
+      ],
+      "false_positives": [
+        "I480"
+      ],
+      "false_negatives": [
+        "I4891",
+        "I5032",
+        "I774",
+        "Y832",
+        "Y9289",
+        "Z006",
+        "Z7901",
+        "Z87891"
+      ],
+      "precision": 0.8571428571428571,
+      "recall": 0.42857142857142855,
+      "f1": 0.5714285714285714,
+      "num_api_codes": 7,
+      "num_true_codes": 14
+    },
+    {
+      "idx": 198,
+      "hadm_id": 24883160,
+      "num_provided_codes": 1,
+      "num_true_missing": 10,
+      "num_api_missing": 9,
+      "elapsed_time": 4.93235182762146,
+      "true_positives": [
+        "G629",
+        "H409",
+        "M1990",
+        "N390"
+      ],
+      "false_positives": [
+        "E1122",
+        "R42",
+        "Z23",
+        "Z7982",
+        "Z9861"
+      ],
+      "false_negatives": [
+        "E785",
+        "H8110",
+        "M4696",
+        "N183",
+        "Q281",
+        "Z96653"
+      ],
+      "precision": 0.4444444444444444,
+      "recall": 0.4,
+      "f1": 0.4210526315789474,
+      "num_api_codes": 9,
+      "num_true_codes": 10
+    },
+    {
+      "idx": 199,
+      "hadm_id": 25805902,
+      "num_provided_codes": 1,
+      "num_true_missing": 4,
+      "num_api_missing": 4,
+      "elapsed_time": 2.283582925796509,
+      "true_positives": [
+        "E785",
+        "R339"
+      ],
+      "false_positives": [
+        "F17210",
+        "R901"
+      ],
+      "false_negatives": [
+        "I517",
+        "Z87891"
+      ],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "num_api_codes": 4,
+      "num_true_codes": 4
+    },
+    {
+      "idx": 201,
+      "hadm_id": 29511210,
+      "num_provided_codes": 16,
+      "num_true_missing": 0,
+      "num_api_missing": 3,
+      "elapsed_time": 9.268257856369019,
+      "true_positives": [],
+      "false_positives": [
+        "B961",
+        "Y843",
+        "Z5181"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 3,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 200,
+      "hadm_id": 22657805,
+      "num_provided_codes": 1,
+      "num_true_missing": 14,
+      "num_api_missing": 5,
+      "elapsed_time": 7.436434984207153,
+      "true_positives": [
+        "E876",
+        "I480",
+        "M14672"
+      ],
+      "false_positives": [
+        "E612",
+        "G629"
+      ],
+      "false_negatives": [
+        "E785",
+        "E8342",
+        "G3184",
+        "G6289",
+        "I10",
+        "I7589",
+        "R55",
+        "V470XXA",
+        "Z66",
+        "Z7901",
+        "Z853"
+      ],
+      "precision": 0.6,
+      "recall": 0.21428571428571427,
+      "f1": 0.3157894736842105,
+      "num_api_codes": 5,
+      "num_true_codes": 14
+    },
+    {
+      "idx": 202,
+      "hadm_id": 21160232,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 5,
+      "elapsed_time": 3.9402432441711426,
+      "true_positives": [
+        "E785",
+        "I110",
+        "I4891",
+        "Z7901"
+      ],
+      "false_positives": [
+        "Z993"
+      ],
+      "false_negatives": [
+        "I509",
+        "W109XXA",
+        "Y929"
+      ],
+      "precision": 0.8,
+      "recall": 0.5714285714285714,
+      "f1": 0.6666666666666666,
+      "num_api_codes": 5,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 203,
+      "hadm_id": 20473074,
+      "num_provided_codes": 1,
+      "num_true_missing": 3,
+      "num_api_missing": 3,
+      "elapsed_time": 1.8819777965545654,
+      "true_positives": [
+        "O700"
+      ],
+      "false_positives": [
+        "Z23",
+        "Z390"
+      ],
+      "false_negatives": [
+        "Z370",
+        "Z3A39"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "f1": 0.3333333333333333,
+      "num_api_codes": 3,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 204,
+      "hadm_id": 28037356,
+      "num_provided_codes": 19,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 2.5906729698181152,
+      "true_positives": [],
+      "false_positives": [
+        "G8918",
+        "I951",
+        "R112",
+        "Z79891"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 205,
+      "hadm_id": 24426454,
+      "num_provided_codes": 1,
+      "num_true_missing": 8,
+      "num_api_missing": 6,
+      "elapsed_time": 4.6519951820373535,
+      "true_positives": [
+        "F319",
+        "G4733",
+        "J309"
+      ],
+      "false_positives": [
+        "E662",
+        "F429",
+        "Z23"
+      ],
+      "false_negatives": [
+        "E669",
+        "F42",
+        "T148",
+        "Y838",
+        "Z6842"
+      ],
+      "precision": 0.5,
+      "recall": 0.375,
+      "f1": 0.42857142857142855,
+      "num_api_codes": 6,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 206,
+      "hadm_id": 29122661,
+      "num_provided_codes": 1,
+      "num_true_missing": 8,
+      "num_api_missing": 8,
+      "elapsed_time": 3.2045629024505615,
+      "true_positives": [
+        "C8590",
+        "E119",
+        "E785",
+        "I10",
+        "I252",
+        "I480",
+        "K219",
+        "Z86718"
+      ],
+      "false_positives": [],
+      "false_negatives": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "num_api_codes": 8,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 207,
+      "hadm_id": 24972431,
+      "num_provided_codes": 11,
+      "num_true_missing": 19,
+      "num_api_missing": 5,
+      "elapsed_time": 6.553792953491211,
+      "true_positives": [
+        "D62",
+        "J189"
+      ],
+      "false_positives": [
+        "I2510",
+        "I5022",
+        "Z7901"
+      ],
+      "false_negatives": [
+        "E785",
+        "F419",
+        "I25119",
+        "I252",
+        "I2542",
+        "I429",
+        "I5020",
+        "M109",
+        "M25562",
+        "R05",
+        "R740",
+        "Z20828",
+        "Z7902",
+        "Z87891",
+        "Z9001",
+        "Z9049",
+        "Z992"
+      ],
+      "precision": 0.4,
+      "recall": 0.10526315789473684,
+      "f1": 0.16666666666666666,
+      "num_api_codes": 5,
+      "num_true_codes": 19
+    },
+    {
+      "idx": 208,
+      "hadm_id": 25419035,
+      "num_provided_codes": 1,
+      "num_true_missing": 29,
+      "num_api_missing": 9,
+      "elapsed_time": 8.372123956680298,
+      "true_positives": [
+        "N179",
+        "R6521",
+        "Z9981"
+      ],
+      "false_positives": [
+        "I4891",
+        "I5031",
+        "J9601",
+        "L0390",
+        "R531",
+        "Z791"
+      ],
+      "false_negatives": [
+        "B9689",
+        "E875",
+        "I130",
+        "I21A1",
+        "I480",
+        "I5033",
+        "I5084",
+        "I878",
+        "J45909",
+        "J690",
+        "J9621",
+        "J9622",
+        "K219",
+        "L03115",
+        "L03116",
+        "L89159",
+        "N1830",
+        "R570",
+        "Z09",
+        "Z20822",
+        "Z66",
+        "Z7901",
+        "Z8616",
+        "Z87891",
+        "Z950",
+        "Z993"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.10344827586206896,
+      "f1": 0.15789473684210528,
+      "num_api_codes": 9,
+      "num_true_codes": 29
+    },
+    {
+      "idx": 209,
+      "hadm_id": 28504657,
+      "num_provided_codes": 1,
+      "num_true_missing": 15,
+      "num_api_missing": 7,
+      "elapsed_time": 7.500178098678589,
+      "true_positives": [
+        "E119",
+        "I509",
+        "J910",
+        "N179"
+      ],
+      "false_positives": [
+        "R600",
+        "Z515",
+        "Z794"
+      ],
+      "false_negatives": [
+        "C259",
+        "C7801",
+        "C7802",
+        "C787",
+        "F1021",
+        "F419",
+        "I110",
+        "M109",
+        "R001",
+        "Z8673",
+        "Z87891"
+      ],
+      "precision": 0.5714285714285714,
+      "recall": 0.26666666666666666,
+      "f1": 0.36363636363636365,
+      "num_api_codes": 7,
+      "num_true_codes": 15
+    },
+    {
+      "idx": 210,
+      "hadm_id": 20547347,
+      "num_provided_codes": 1,
+      "num_true_missing": 5,
+      "num_api_missing": 5,
+      "elapsed_time": 2.9395127296447754,
+      "true_positives": [
+        "I6340",
+        "I7774"
+      ],
+      "false_positives": [
+        "E119",
+        "I10",
+        "R079"
+      ],
+      "false_negatives": [
+        "K219",
+        "R0789",
+        "R29702"
+      ],
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4000000000000001,
+      "num_api_codes": 5,
+      "num_true_codes": 5
+    },
+    {
+      "idx": 211,
+      "hadm_id": 23500400,
+      "num_provided_codes": 1,
+      "num_true_missing": 8,
+      "num_api_missing": 5,
+      "elapsed_time": 5.39854621887207,
+      "true_positives": [
+        "A568",
+        "D573",
+        "O3413",
+        "O9832",
+        "O9902"
+      ],
+      "false_positives": [],
+      "false_negatives": [
+        "D250",
+        "Z370",
+        "Z3A37"
+      ],
+      "precision": 1.0,
+      "recall": 0.625,
+      "f1": 0.7692307692307693,
+      "num_api_codes": 5,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 212,
+      "hadm_id": 26096708,
+      "num_provided_codes": 1,
+      "num_true_missing": 7,
+      "num_api_missing": 4,
+      "elapsed_time": 3.3164641857147217,
+      "true_positives": [
+        "I2510",
+        "N179"
+      ],
+      "false_positives": [
+        "Z23",
+        "Z992"
+      ],
+      "false_negatives": [
+        "C8510",
+        "I129",
+        "N1830",
+        "Z20828",
+        "Z955"
+      ],
+      "precision": 0.5,
+      "recall": 0.2857142857142857,
+      "f1": 0.36363636363636365,
+      "num_api_codes": 4,
+      "num_true_codes": 7
+    },
+    {
+      "idx": 213,
+      "hadm_id": 29685883,
+      "num_provided_codes": 11,
+      "num_true_missing": 3,
+      "num_api_missing": 5,
+      "elapsed_time": 3.852897882461548,
+      "true_positives": [],
+      "false_positives": [
+        "L97429",
+        "M9689",
+        "Y831",
+        "Z452",
+        "Z792"
+      ],
+      "false_negatives": [
+        "L97329",
+        "T84223A",
+        "Y838"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 214,
+      "hadm_id": 27904255,
+      "num_provided_codes": 1,
+      "num_true_missing": 14,
+      "num_api_missing": 8,
+      "elapsed_time": 9.192927837371826,
+      "true_positives": [
+        "I5032",
+        "R8271"
+      ],
+      "false_positives": [
+        "B182",
+        "I4820",
+        "M0579",
+        "N183",
+        "R21",
+        "T82120A"
+      ],
+      "false_negatives": [
+        "B1920",
+        "B965",
+        "I071",
+        "I130",
+        "I4891",
+        "M0600",
+        "N179",
+        "N189",
+        "Z7901",
+        "Z85038",
+        "Z85828",
+        "Z950"
+      ],
+      "precision": 0.25,
+      "recall": 0.14285714285714285,
+      "f1": 0.18181818181818182,
+      "num_api_codes": 8,
+      "num_true_codes": 14
+    },
+    {
+      "idx": 215,
+      "hadm_id": 22922246,
+      "num_provided_codes": 1,
+      "num_true_missing": 8,
+      "num_api_missing": 7,
+      "elapsed_time": 10.553201913833618,
+      "true_positives": [
+        "E780",
+        "I10",
+        "N400"
+      ],
+      "false_positives": [
+        "F17200",
+        "I2510",
+        "Z7901",
+        "Z7982"
+      ],
+      "false_negatives": [
+        "I214",
+        "I25119",
+        "Z7902",
+        "Z87891",
+        "Z951"
+      ],
+      "precision": 0.42857142857142855,
+      "recall": 0.375,
+      "f1": 0.39999999999999997,
+      "num_api_codes": 7,
+      "num_true_codes": 8
+    },
+    {
+      "idx": 216,
+      "hadm_id": 27255244,
+      "num_provided_codes": 14,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 5.953078031539917,
+      "true_positives": [],
+      "false_positives": [
+        "F329",
+        "G4733",
+        "J45909",
+        "Z7902",
+        "Z9221"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 217,
+      "hadm_id": 22549560,
+      "num_provided_codes": 3,
+      "num_true_missing": 0,
+      "num_api_missing": 2,
+      "elapsed_time": 1.9414057731628418,
+      "true_positives": [],
+      "false_positives": [
+        "T800XXA",
+        "Z23"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 2,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 218,
+      "hadm_id": 25449686,
+      "num_provided_codes": 3,
+      "num_true_missing": 3,
+      "num_api_missing": 5,
+      "elapsed_time": 4.577584743499756,
+      "true_positives": [
+        "B181",
+        "E876"
+      ],
+      "false_positives": [
+        "E8342",
+        "R112",
+        "T82868A"
+      ],
+      "false_negatives": [
+        "M059"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "f1": 0.5,
+      "num_api_codes": 5,
+      "num_true_codes": 3
+    },
+    {
+      "idx": 219,
+      "hadm_id": 25681330,
+      "num_provided_codes": 1,
+      "num_true_missing": 24,
+      "num_api_missing": 10,
+      "elapsed_time": 10.128844022750854,
+      "true_positives": [
+        "C773",
+        "E871",
+        "F17210",
+        "I10",
+        "J45909"
+      ],
+      "false_positives": [
+        "B20",
+        "C418",
+        "C7800",
+        "R0602",
+        "R5383"
+      ],
+      "false_negatives": [
+        "C4001",
+        "C7801",
+        "C7802",
+        "D500",
+        "D630",
+        "E8339",
+        "E861",
+        "E8770",
+        "F418",
+        "G893",
+        "K5904",
+        "K649",
+        "Z21",
+        "Z79891",
+        "Z8042",
+        "Z8051",
+        "Z8052",
+        "Z87311",
+        "Z95828"
+      ],
+      "precision": 0.5,
+      "recall": 0.20833333333333334,
+      "f1": 0.29411764705882354,
+      "num_api_codes": 10,
+      "num_true_codes": 24
+    },
+    {
+      "idx": 220,
+      "hadm_id": 23012454,
+      "num_provided_codes": 1,
+      "num_true_missing": 10,
+      "num_api_missing": 5,
+      "elapsed_time": 2.7986109256744385,
+      "true_positives": [
+        "Z89611"
+      ],
+      "false_positives": [
+        "C7931",
+        "G8929",
+        "I8290",
+        "M792"
+      ],
+      "false_negatives": [
+        "C7801",
+        "G546",
+        "G893",
+        "K219",
+        "Z7902",
+        "Z8589",
+        "Z86718",
+        "Z87891",
+        "Z993"
+      ],
+      "precision": 0.2,
+      "recall": 0.1,
+      "f1": 0.13333333333333333,
+      "num_api_codes": 5,
+      "num_true_codes": 10
+    },
+    {
+      "idx": 221,
+      "hadm_id": 27989852,
+      "num_provided_codes": 18,
+      "num_true_missing": 0,
+      "num_api_missing": 4,
+      "elapsed_time": 3.1261072158813477,
+      "true_positives": [],
+      "false_positives": [
+        "I771",
+        "R269",
+        "R531",
+        "Z434"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 4,
+      "num_true_codes": 0
+    },
+    {
+      "idx": 222,
+      "hadm_id": 27204052,
+      "num_provided_codes": 14,
+      "num_true_missing": 0,
+      "num_api_missing": 5,
+      "elapsed_time": 5.617633581161499,
+      "true_positives": [],
+      "false_positives": [
+        "D709",
+        "R112",
+        "R634",
+        "Z7401",
+        "Z79899"
+      ],
+      "false_negatives": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "num_api_codes": 5,
+      "num_true_codes": 0
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "idx": 30,
+      "hadm_id": 21978017,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1214. Please try again in 2.428s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 31,
+      "hadm_id": 26775845,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1222. Please try again in 2.444s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 36,
+      "hadm_id": 27703954,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1389. Please try again in 2.778s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 38,
+      "hadm_id": 25136561,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1299. Please try again in 2.598s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 80,
+      "hadm_id": 28741164,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1265. Please try again in 2.53s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 81,
+      "hadm_id": 28327193,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1356. Please try again in 2.712s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 82,
+      "hadm_id": 22090037,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1303. Please try again in 2.606s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 83,
+      "hadm_id": 29814531,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1337. Please try again in 2.674s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 84,
+      "hadm_id": 29576020,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1230. Please try again in 2.46s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 85,
+      "hadm_id": 21607181,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1359. Please try again in 2.718s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 86,
+      "hadm_id": 20103067,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1231. Please try again in 2.462s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 87,
+      "hadm_id": 23576063,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1451. Please try again in 2.902s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 88,
+      "hadm_id": 22375635,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1280. Please try again in 2.56s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 89,
+      "hadm_id": 23362802,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1255. Please try again in 2.51s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 111,
+      "hadm_id": 29014086,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 29871, Requested 1246. Please try again in 2.234s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 112,
+      "hadm_id": 25907959,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 28785, Requested 1218. Please try again in 6ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 114,
+      "hadm_id": 24922893,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 28751, Requested 1266. Please try again in 34ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 117,
+      "hadm_id": 24403784,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 29824, Requested 1450. Please try again in 2.548s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 119,
+      "hadm_id": 21164608,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 29882, Requested 1296. Please try again in 2.356s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 160,
+      "hadm_id": 21263143,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1263. Please try again in 2.526s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 161,
+      "hadm_id": 29769056,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1217. Please try again in 2.434s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 162,
+      "hadm_id": 22602515,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1465. Please try again in 2.93s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 163,
+      "hadm_id": 27478457,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1348. Please try again in 2.696s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 164,
+      "hadm_id": 23137192,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1361. Please try again in 2.722s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 165,
+      "hadm_id": 29758724,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1200. Please try again in 2.4s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 168,
+      "hadm_id": 23688894,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1232. Please try again in 2.464s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 169,
+      "hadm_id": 25087349,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1359. Please try again in 2.718s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 200,
+      "hadm_id": 22657805,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 28942, Requested 1211. Please try again in 306ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 202,
+      "hadm_id": 21160232,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 29010, Requested 1214. Please try again in 448ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 203,
+      "hadm_id": 20473074,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1238. Please try again in 2.476s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 204,
+      "hadm_id": 28037356,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 29584, Requested 1545. Please try again in 2.258s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 205,
+      "hadm_id": 24426454,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 28950, Requested 1251. Please try again in 402ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 206,
+      "hadm_id": 29122661,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1286. Please try again in 2.572s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 207,
+      "hadm_id": 24972431,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 29965, Requested 1380. Please try again in 2.69s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 208,
+      "hadm_id": 25419035,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 28918, Requested 1265. Please try again in 366ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "idx": 209,
+      "hadm_id": 28504657,
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-GxYX3wdxA5pxJqwqTeBK4lTb on tokens per min (TPM): Limit 30000, Used 30000, Requested 1266. Please try again in 2.532s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}"
+    }
+  ],
+  "rate_limited": false
 }

@@ -8,7 +8,7 @@ import asyncio
 from pydantic import BaseModel, Field
 from typing import Dict, Any, List, AsyncGenerator, Optional, Union
 from utils.vector_store_utils import TypedQueryResult, vector_store, PatientSummaryMetadata
-from utils.embedding_utils import embedding_model
+# from utils.embedding_utils import embedding_model
 import utils.config as config
 import json
 import logging
@@ -57,8 +57,9 @@ async def check_icd_codes_streaming(discharge_summary: str, existing_codes: list
         # Progress: Searching vector database
         yield _format_sse_event("progress", {"status": "searching", "message": "Querying ICD-10 code database..."})
 
-        embedding = embedding_model.encode(discharge_summary)
-        examples = vector_store.search_with_embedding(embedding, top_k=top_k)
+        # embedding = embedding_model.encode(discharge_summary)
+        # examples = vector_store.search_with_embedding(embedding, top_k=top_k)
+        examples = {'metadatas': [], 'documents': []}
         # Query vector store for similar examples
         # examples = vector_store.search([discharge_summary], top_k=top_k)
         

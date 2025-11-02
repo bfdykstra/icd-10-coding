@@ -1,58 +1,65 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import { Upload, FileText } from "lucide-react"
-import { ICD10MultiSelect } from "@/components/icd10-multi-select"
-import { SuggestedCodes } from "@/components/suggested-codes"
-import { checkIcdCodesStreaming } from "@/lib/api"
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Upload, FileText } from "lucide-react";
+import { ICD10MultiSelect } from "@/components/icd10-multi-select";
+import { SuggestedCodes } from "@/components/suggested-codes";
+import { checkIcdCodesStreaming } from "@/lib/api";
 
 export type ICD10Code = {
-  code: string
-  description: string
-}
+  code: string;
+  description: string;
+};
 
 export type SuggestedCode = {
-  code: string
-  description: string
-  clinicalInfo?: string
-  accepted?: boolean
-}
+  code: string;
+  description: string;
+  clinicalInfo?: string;
+  confidence?: string;
+  accepted?: boolean;
+};
 
 export function ICD10Checker() {
-  const [dischargeSummary, setDischargeSummary] = useState("")
-  const [selectedCodes, setSelectedCodes] = useState<ICD10Code[]>([])
-  const [isProcessing, setIsProcessing] = useState(false)
-  const [streamedText, setStreamedText] = useState("")
-  const [suggestedCodes, setSuggestedCodes] = useState<SuggestedCode[]>([])
-  const [showResults, setShowResults] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [dischargeSummary, setDischargeSummary] = useState("");
+  const [selectedCodes, setSelectedCodes] = useState<ICD10Code[]>([]);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [streamedText, setStreamedText] = useState("");
+  const [suggestedCodes, setSuggestedCodes] = useState<SuggestedCode[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
+    const file = e.target.files?.[0];
     if (file) {
-      const reader = new FileReader()
+      const reader = new FileReader();
       reader.onload = (event) => {
-        setDischargeSummary(event.target?.result as string)
-      }
-      reader.readAsText(file)
+        setDischargeSummary(event.target?.result as string);
+      };
+      reader.readAsText(file);
     }
-  }
+  };
 
   const handleSubmit = async () => {
-    if (!dischargeSummary.trim()) return
+    if (!dischargeSummary.trim()) return;
 
-    setIsProcessing(true)
-    setStreamedText("")
-    setSuggestedCodes([])
-    setShowResults(true)
-    setError(null)
+    setIsProcessing(true);
+    setStreamedText("");
+    setSuggestedCodes([]);
+    setShowResults(true);
+    setError(null);
 
     // Real API streaming response
     await checkIcdCodesStreaming(
@@ -60,32 +67,36 @@ export function ICD10Checker() {
       selectedCodes,
       (message) => {
         // Handle progress events
-        setStreamedText((prev) => prev + message + "\n")
+        setStreamedText((prev) => prev + message + "\n");
       },
       (codes) => {
         // Handle chunk events - update suggested codes incrementally
-        setSuggestedCodes(codes)
+        setSuggestedCodes(codes);
       },
       (codes) => {
         // Handle result event - final codes
-        setSuggestedCodes(codes)
-        setIsProcessing(false)
+        setSuggestedCodes(codes);
+        setIsProcessing(false);
       },
       (errorMessage) => {
         // Handle error events
-        setError(errorMessage)
-        setIsProcessing(false)
-      },
-    )
-  }
+        setError(errorMessage);
+        setIsProcessing(false);
+      }
+    );
+  };
 
   const handleAcceptCode = (code: string) => {
-    setSuggestedCodes((prev) => prev.map((c) => (c.code === code ? { ...c, accepted: true } : c)))
-  }
+    setSuggestedCodes((prev) =>
+      prev.map((c) => (c.code === code ? { ...c, accepted: true } : c))
+    );
+  };
 
   const handleRejectCode = (code: string) => {
-    setSuggestedCodes((prev) => prev.map((c) => (c.code === code ? { ...c, accepted: false } : c)))
-  }
+    setSuggestedCodes((prev) =>
+      prev.map((c) => (c.code === code ? { ...c, accepted: false } : c))
+    );
+  };
 
   const handleAddCustomCode = (newCode: ICD10Code) => {
     setSuggestedCodes((prev) => [
@@ -95,13 +106,15 @@ export function ICD10Checker() {
         description: newCode.description,
         accepted: true,
       },
-    ])
-  }
+    ]);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
       <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold text-foreground mb-2">ICD-10 Code Validator</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-2">
+          ICD-10 Code Validator
+        </h1>
         <p className="text-lg text-muted-foreground">
           Ensure accurate coding for proper Medicare & Medicaid reimbursement
         </p>
@@ -113,7 +126,7 @@ export function ICD10Checker() {
           <CardHeader>
             <CardTitle className="text-foreground">Discharge Summary</CardTitle>
             <CardDescription className="text-muted-foreground">
-              Paste or upload the patient's discharge summary
+              Paste or upload the patient&apos;s discharge summary
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -142,7 +155,9 @@ export function ICD10Checker() {
                 className="flex items-center justify-center gap-2 cursor-pointer border-2 border-dashed border-border rounded-lg p-6 hover:border-primary transition-colors bg-card"
               >
                 <Upload className="h-5 w-5 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Upload discharge summary file</span>
+                <span className="text-sm text-muted-foreground">
+                  Upload discharge summary file
+                </span>
                 <input
                   id="file-upload"
                   type="file"
@@ -154,8 +169,13 @@ export function ICD10Checker() {
             </div>
 
             <div>
-              <Label className="text-foreground mb-2 block">Existing ICD-10 Codes</Label>
-              <ICD10MultiSelect selectedCodes={selectedCodes} onCodesChange={setSelectedCodes} />
+              <Label className="text-foreground mb-2 block">
+                Existing ICD-10 Codes
+              </Label>
+              <ICD10MultiSelect
+                selectedCodes={selectedCodes}
+                onCodesChange={setSelectedCodes}
+              />
             </div>
 
             <Button
@@ -201,16 +221,22 @@ export function ICD10Checker() {
               <div className="space-y-4">
                 {error && (
                   <div className="bg-destructive/10 border border-destructive rounded-lg p-4">
-                    <p className="text-sm text-destructive font-medium">Error: {error}</p>
+                    <p className="text-sm text-destructive font-medium">
+                      Error: {error}
+                    </p>
                     <p className="text-xs text-muted-foreground mt-1">
-                      Please ensure the backend server is running at {process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}
+                      Please ensure the backend server is running at{" "}
+                      {process.env.NEXT_PUBLIC_API_URL ||
+                        "http://localhost:8000"}
                     </p>
                   </div>
                 )}
 
                 {isProcessing && (
                   <div className="bg-accent rounded-lg p-4">
-                    <p className="text-sm text-accent-foreground whitespace-pre-wrap">{streamedText}</p>
+                    <p className="text-sm text-accent-foreground whitespace-pre-wrap">
+                      {streamedText}
+                    </p>
                   </div>
                 )}
 
@@ -223,11 +249,16 @@ export function ICD10Checker() {
                   />
                 )}
 
-                {!isProcessing && !error && suggestedCodes.length === 0 && streamedText && (
-                  <div className="bg-accent rounded-lg p-4">
-                    <p className="text-sm text-accent-foreground">No missing codes identified.</p>
-                  </div>
-                )}
+                {!isProcessing &&
+                  !error &&
+                  suggestedCodes.length === 0 &&
+                  streamedText && (
+                    <div className="bg-accent rounded-lg p-4">
+                      <p className="text-sm text-accent-foreground">
+                        No missing codes identified.
+                      </p>
+                    </div>
+                  )}
               </div>
             )}
           </CardContent>
@@ -238,7 +269,9 @@ export function ICD10Checker() {
       {showResults && !isProcessing && suggestedCodes.length > 0 && (
         <Card className="mt-6 border-border">
           <CardHeader>
-            <CardTitle className="text-foreground">Accepted Codes Summary</CardTitle>
+            <CardTitle className="text-foreground">
+              Accepted Codes Summary
+            </CardTitle>
             <CardDescription className="text-muted-foreground">
               Codes marked for inclusion in the final report
             </CardDescription>
@@ -248,17 +281,23 @@ export function ICD10Checker() {
               {suggestedCodes
                 .filter((code) => code.accepted)
                 .map((code) => (
-                  <Badge key={code.code} variant="default" className="bg-primary text-primary-foreground">
+                  <Badge
+                    key={code.code}
+                    variant="default"
+                    className="bg-primary text-primary-foreground"
+                  >
                     {code.code} - {code.description}
                   </Badge>
                 ))}
               {suggestedCodes.filter((code) => code.accepted).length === 0 && (
-                <p className="text-sm text-muted-foreground">No codes accepted yet</p>
+                <p className="text-sm text-muted-foreground">
+                  No codes accepted yet
+                </p>
               )}
             </div>
           </CardContent>
         </Card>
       )}
     </div>
-  )
+  );
 }
