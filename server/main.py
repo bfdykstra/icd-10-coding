@@ -23,9 +23,9 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",  # Next.js default dev server
         "https://icd-10-coding.vercel.app/",
-        "https://icd-10-coding.vercel.app"
+        "https://icd-10-coding.vercel.app",
+        "http://localhost:3000",  # Next.js default dev server
     ],
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods (GET, POST, OPTIONS, etc.)
@@ -70,5 +70,8 @@ async def check_icd_codes_streaming_endpoint(request: CheckRequest):
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
             "X-Accel-Buffering": "no",  # Disable buffering for nginx
+            "Access-Control-Allow-Origin": "https://icd-10-coding.vercel.app, http://localhost:3000",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "POST"
         }
     )
